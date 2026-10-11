@@ -1,0 +1,202 @@
+{
+  "execution": {
+    "status": "success",
+    "environment": "local simulation (not Hadoop)",
+    "map_tasks": 1,
+    "reducers": 1,
+    "combiner": false
+  },
+  "datasets": {
+    "wifi": {
+      "file": "wifi_logs.csv",
+      "lines_excluding_header": 5005
+    },
+    "canteen": {
+      "file": "canteen.csv",
+      "lines_excluding_header": 3179
+    },
+    "library": {
+      "file": "library.csv",
+      "lines_excluding_header": 1505
+    },
+    "transport": {
+      "file": "transport.csv",
+      "lines_excluding_header": 3568
+    }
+  },
+  "mapper_counters": {
+    "job1": {
+      "wifi.header_lines": 1,
+      "wifi.records": 5005,
+      "wifi.rejected": 5,
+      "wifi.rejected.bad_data_mb": 1,
+      "wifi.rejected.bad_timestamp": 1,
+      "wifi.rejected.missing_student": 1,
+      "wifi.rejected.negative_data_mb": 1,
+      "wifi.rejected.wrong_field_count": 1,
+      "wifi.valid": 5000
+    },
+    "job2": {
+      "wifi.header_lines": 1,
+      "wifi.records": 5005,
+      "wifi.rejected": 5,
+      "wifi.rejected.bad_data_mb": 1,
+      "wifi.rejected.bad_timestamp": 1,
+      "wifi.rejected.missing_student": 1,
+      "wifi.rejected.negative_data_mb": 1,
+      "wifi.rejected.wrong_field_count": 1,
+      "wifi.valid": 5000
+    },
+    "job3": {
+      "canteen.header_lines": 1,
+      "canteen.records": 3179,
+      "canteen.rejected": 5,
+      "canteen.rejected.bad_quantity": 1,
+      "canteen.rejected.bad_timestamp": 1,
+      "canteen.rejected.csv_error": 1,
+      "canteen.rejected.missing_item": 1,
+      "canteen.rejected.negative_amount": 1,
+      "canteen.valid": 3174
+    },
+    "job4": {
+      "canteen.header_lines": 1,
+      "canteen.records": 3179,
+      "canteen.rejected": 5,
+      "canteen.rejected.bad_quantity": 1,
+      "canteen.rejected.bad_timestamp": 1,
+      "canteen.rejected.csv_error": 1,
+      "canteen.rejected.missing_item": 1,
+      "canteen.rejected.negative_amount": 1,
+      "canteen.valid": 3174
+    },
+    "job5": {
+      "library.header_lines": 1,
+      "library.records": 1505,
+      "library.rejected": 5,
+      "library.rejected.bad_duration": 1,
+      "library.rejected.bad_entry_type": 1,
+      "library.rejected.bad_timestamp": 1,
+      "library.rejected.negative_duration": 1,
+      "library.rejected.wrong_field_count": 1,
+      "library.valid": 1500
+    },
+    "job6": {
+      "transport.header_lines": 1,
+      "transport.records": 3568,
+      "transport.rejected": 5,
+      "transport.rejected.bad_speed": 1,
+      "transport.rejected.bad_timestamp": 1,
+      "transport.rejected.missing_route": 1,
+      "transport.rejected.negative_speed": 1,
+      "transport.rejected.wrong_field_count": 1,
+      "transport.valid": 3563
+    }
+  },
+  "output_rows": {
+    "job1_hourly_wifi.csv": 112,
+    "job2_access_points.csv": 12,
+    "job3_canteen_items.csv": 12,
+    "job4_pairs.csv": 66,
+    "job5_anomalies.csv": 6,
+    "job6_route_hour_speed.csv": 784
+  },
+  "invariants": [
+    {
+      "check": "every mapper line accounted for (records = valid + rejected)",
+      "passed": true
+    },
+    {
+      "check": "valid/rejected counts match independent reference",
+      "passed": true
+    },
+    {
+      "check": "J1 sessions == valid wifi rows",
+      "passed": true
+    },
+    {
+      "check": "J2 sessions == valid wifi rows",
+      "passed": true
+    },
+    {
+      "check": "J1 DataMB total == J2 DataMB total",
+      "passed": true
+    },
+    {
+      "check": "J1 DurationMin total == J2 DurationMin total",
+      "passed": true
+    },
+    {
+      "check": "J3 quantity == reference valid quantity",
+      "passed": true
+    },
+    {
+      "check": "J3 revenue == reference valid revenue",
+      "passed": true
+    },
+    {
+      "check": "J4 pairs canonical (ItemA < ItemB)",
+      "passed": true
+    },
+    {
+      "check": "J4 counts <= number of transactions",
+      "passed": true
+    },
+    {
+      "check": "J5 visits == valid library rows",
+      "passed": true
+    },
+    {
+      "check": "J5 every anomaly average > threshold",
+      "passed": true
+    },
+    {
+      "check": "J6 status agrees with average",
+      "passed": true
+    },
+    {
+      "check": "J6 observations == valid transport rows",
+      "passed": true
+    },
+    {
+      "check": "J6 hour keys are YYYY-MM-DD-HH",
+      "passed": true
+    },
+    {
+      "check": "job1 every output row matches independent reference",
+      "passed": true
+    },
+    {
+      "check": "job2 every output row matches independent reference",
+      "passed": true
+    },
+    {
+      "check": "job3 every output row matches independent reference",
+      "passed": true
+    },
+    {
+      "check": "job4 every output row matches independent reference",
+      "passed": true
+    },
+    {
+      "check": "job5 every output row matches independent reference",
+      "passed": true
+    },
+    {
+      "check": "job6 every output row matches independent reference",
+      "passed": true
+    }
+  ],
+  "reference_mismatches": {},
+  "known_limitations": [
+    "Executed with a local simulator; Hadoop cluster execution not verified.",
+    "Records are line-oriented; CSV fields with embedded newlines are rejected.",
+    "Congestion is an average-speed indicator only."
+  ],
+  "tests": {
+    "exit_code": 0,
+    "summary": [
+      "Ran 36 tests in 4.967s",
+      "OK"
+    ]
+  }
+}

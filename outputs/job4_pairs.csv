@@ -1,0 +1,67 @@
+ItemA,ItemB,TransactionCount
+"Chips, Salted","Masala ""Special"" Dosa",32
+"Chips, Salted",Coffee,26
+"Chips, Salted",Cookies,21
+"Chips, Salted",Ice Cream,21
+"Chips, Salted",Juice,27
+"Chips, Salted",Paneer Roll,29
+"Chips, Salted",Samosa,25
+"Chips, Salted",Sandwich,25
+"Chips, Salted",Tea,28
+"Chips, Salted",Veg Biryani,27
+"Chips, Salted",Water Bottle,22
+"Masala ""Special"" Dosa",Paneer Roll,24
+"Masala ""Special"" Dosa",Samosa,25
+"Masala ""Special"" Dosa",Sandwich,20
+"Masala ""Special"" Dosa",Tea,21
+"Masala ""Special"" Dosa",Veg Biryani,27
+"Masala ""Special"" Dosa",Water Bottle,29
+Coffee,"Masala ""Special"" Dosa",24
+Coffee,Cookies,23
+Coffee,Ice Cream,22
+Coffee,Juice,23
+Coffee,Paneer Roll,31
+Coffee,Samosa,20
+Coffee,Sandwich,220
+Coffee,Tea,25
+Coffee,Veg Biryani,18
+Coffee,Water Bottle,22
+Cookies,"Masala ""Special"" Dosa",30
+Cookies,Ice Cream,22
+Cookies,Juice,19
+Cookies,Paneer Roll,25
+Cookies,Samosa,25
+Cookies,Sandwich,26
+Cookies,Tea,39
+Cookies,Veg Biryani,36
+Cookies,Water Bottle,34
+Ice Cream,"Masala ""Special"" Dosa",30
+Ice Cream,Juice,23
+Ice Cream,Paneer Roll,27
+Ice Cream,Samosa,19
+Ice Cream,Sandwich,21
+Ice Cream,Tea,30
+Ice Cream,Veg Biryani,19
+Ice Cream,Water Bottle,29
+Juice,"Masala ""Special"" Dosa",29
+Juice,Paneer Roll,23
+Juice,Samosa,25
+Juice,Sandwich,27
+Juice,Tea,19
+Juice,Veg Biryani,25
+Juice,Water Bottle,30
+Paneer Roll,Samosa,25
+Paneer Roll,Sandwich,27
+Paneer Roll,Tea,32
+Paneer Roll,Veg Biryani,27
+Paneer Roll,Water Bottle,30
+Samosa,Sandwich,26
+Samosa,Tea,242
+Samosa,Veg Biryani,26
+Samosa,Water Bottle,29
+Sandwich,Tea,32
+Sandwich,Veg Biryani,27
+Sandwich,Water Bottle,27
+Tea,Veg Biryani,20
+Tea,Water Bottle,31
+Veg Biryani,Water Bottle,23

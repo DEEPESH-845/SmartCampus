@@ -1,0 +1,2113 @@
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Masala \"Special\" Dosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Sandwich", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Paneer Roll", "Samosa"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Ice Cream", "Juice"]	1
+["Juice", "Tea"]	1
+["Juice", "Water Bottle"]	1
+["Tea", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Tea", "Water Bottle"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Chips, Salted", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Sandwich"]	1
+["Chips, Salted", "Cookies"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Cookies", "Paneer Roll"]	1
+["Chips, Salted", "Samosa"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Samosa", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Tea", "Veg Biryani"]	1
+["Cookies", "Tea"]	1
+["Samosa", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Veg Biryani"]	1
+["Cookies", "Water Bottle"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Paneer Roll", "Tea"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Cookies", "Samosa"]	1
+["Cookies", "Tea"]	1
+["Samosa", "Tea"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Ice Cream", "Juice"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Juice", "Paneer Roll"]	1
+["Paneer Roll", "Samosa"]	1
+["Tea", "Water Bottle"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Cookies", "Ice Cream"]	1
+["Chips, Salted", "Ice Cream"]	1
+["Chips, Salted", "Juice"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Ice Cream", "Juice"]	1
+["Ice Cream", "Water Bottle"]	1
+["Juice", "Water Bottle"]	1
+["Paneer Roll", "Sandwich"]	1
+["Paneer Roll", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Cookies", "Paneer Roll"]	1
+["Cookies", "Veg Biryani"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Coffee"]	1
+["Chips, Salted", "Juice"]	1
+["Coffee", "Juice"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Chips, Salted", "Tea"]	1
+["Masala \"Special\" Dosa", "Tea"]	1
+["Coffee", "Cookies"]	1
+["Coffee", "Juice"]	1
+["Cookies", "Juice"]	1
+["Chips, Salted", "Coffee"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Cookies", "Samosa"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Coffee", "Ice Cream"]	1
+["Coffee", "Veg Biryani"]	1
+["Coffee", "Water Bottle"]	1
+["Ice Cream", "Veg Biryani"]	1
+["Ice Cream", "Water Bottle"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Ice Cream", "Water Bottle"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Chips, Salted", "Cookies"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Cookies", "Veg Biryani"]	1
+["Cookies", "Water Bottle"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Ice Cream", "Tea"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Juice"]	1
+["Cookies", "Veg Biryani"]	1
+["Juice", "Veg Biryani"]	1
+["Chips, Salted", "Juice"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Juice", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Coffee", "Tea"]	1
+["Coffee", "Water Bottle"]	1
+["Tea", "Water Bottle"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Paneer Roll", "Samosa"]	1
+["Samosa", "Tea"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Chips, Salted", "Juice"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Juice", "Water Bottle"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Juice", "Water Bottle"]	1
+["Chips, Salted", "Cookies"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Cookies", "Veg Biryani"]	1
+["Coffee", "Paneer Roll"]	1
+["Chips, Salted", "Cookies"]	1
+["Sandwich", "Tea"]	1
+["Ice Cream", "Sandwich"]	1
+["Cookies", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Juice", "Sandwich"]	1
+["Juice", "Water Bottle"]	1
+["Sandwich", "Water Bottle"]	1
+["Chips, Salted", "Ice Cream"]	1
+["Sandwich", "Tea"]	1
+["Cookies", "Ice Cream"]	1
+["Cookies", "Water Bottle"]	1
+["Ice Cream", "Water Bottle"]	1
+["Cookies", "Water Bottle"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Coffee", "Water Bottle"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Juice", "Paneer Roll"]	1
+["Coffee", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Sandwich", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Ice Cream", "Samosa"]	1
+["Coffee", "Ice Cream"]	1
+["Coffee", "Tea"]	1
+["Ice Cream", "Tea"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Paneer Roll", "Samosa"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Paneer Roll", "Sandwich"]	1
+["Chips, Salted", "Sandwich"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Sandwich", "Water Bottle"]	1
+["Paneer Roll", "Sandwich"]	1
+["Juice", "Paneer Roll"]	1
+["Juice", "Veg Biryani"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Samosa"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Tea"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Tea", "Veg Biryani"]	1
+["Ice Cream", "Samosa"]	1
+["Ice Cream", "Tea"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Cookies", "Tea"]	1
+["Juice", "Paneer Roll"]	1
+["Juice", "Sandwich"]	1
+["Paneer Roll", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Juice", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Juice", "Tea"]	1
+["Juice", "Water Bottle"]	1
+["Tea", "Water Bottle"]	1
+["Coffee", "Samosa"]	1
+["Cookies", "Ice Cream"]	1
+["Cookies", "Paneer Roll"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Juice"]	1
+["Cookies", "Veg Biryani"]	1
+["Juice", "Veg Biryani"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Sandwich"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Cookies", "Tea"]	1
+["Masala \"Special\" Dosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Juice", "Tea"]	1
+["Ice Cream", "Samosa"]	1
+["Ice Cream", "Sandwich"]	1
+["Ice Cream", "Tea"]	1
+["Samosa", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Juice", "Tea"]	1
+["Juice", "Water Bottle"]	1
+["Tea", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Paneer Roll", "Sandwich"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Sandwich", "Veg Biryani"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Chips, Salted", "Sandwich"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Masala \"Special\" Dosa", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Sandwich", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Tea"]	1
+["Coffee", "Water Bottle"]	1
+["Tea", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Juice", "Water Bottle"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Cookies", "Paneer Roll"]	1
+["Cookies", "Veg Biryani"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Cookies", "Sandwich"]	1
+["Cookies", "Tea"]	1
+["Cookies", "Water Bottle"]	1
+["Sandwich", "Tea"]	1
+["Sandwich", "Water Bottle"]	1
+["Tea", "Water Bottle"]	1
+["Chips, Salted", "Sandwich"]	1
+["Cookies", "Veg Biryani"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Juice", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Water Bottle"]	1
+["Coffee", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Tea"]	1
+["Juice", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Ice Cream", "Tea"]	1
+["Ice Cream", "Veg Biryani"]	1
+["Cookies", "Ice Cream"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Samosa", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Sandwich", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Cookies"]	1
+["Coffee", "Paneer Roll"]	1
+["Cookies", "Paneer Roll"]	1
+["Paneer Roll", "Sandwich"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Ice Cream"]	1
+["Chips, Salted", "Samosa"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Samosa"]	1
+["Cookies", "Sandwich"]	1
+["Cookies", "Veg Biryani"]	1
+["Samosa", "Sandwich"]	1
+["Samosa", "Veg Biryani"]	1
+["Sandwich", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Ice Cream"]	1
+["Coffee", "Paneer Roll"]	1
+["Coffee", "Veg Biryani"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Samosa"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Veg Biryani"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Paneer Roll", "Tea"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Tea", "Veg Biryani"]	1
+["Ice Cream", "Tea"]	1
+["Juice", "Tea"]	1
+["Cookies", "Juice"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Water Bottle"]	1
+["Coffee", "Ice Cream"]	1
+["Masala \"Special\" Dosa", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Sandwich", "Veg Biryani"]	1
+["Sandwich", "Water Bottle"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Coffee", "Paneer Roll"]	1
+["Coffee", "Samosa"]	1
+["Coffee", "Sandwich"]	1
+["Paneer Roll", "Samosa"]	1
+["Paneer Roll", "Sandwich"]	1
+["Samosa", "Sandwich"]	1
+["Tea", "Veg Biryani"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Paneer Roll", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Juice"]	1
+["Cookies", "Tea"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Masala \"Special\" Dosa", "Tea"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Water Bottle"]	1
+["Tea", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Tea"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Sandwich", "Tea"]	1
+["Sandwich", "Veg Biryani"]	1
+["Tea", "Veg Biryani"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Cookies", "Samosa"]	1
+["Cookies", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Masala \"Special\" Dosa", "Sandwich"]	1
+["Samosa", "Sandwich"]	1
+["Cookies", "Juice"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Juice", "Paneer Roll"]	1
+["Juice", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Sandwich"]	1
+["Paneer Roll", "Sandwich"]	1
+["Coffee", "Water Bottle"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Chips, Salted", "Tea"]	1
+["Masala \"Special\" Dosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Juice"]	1
+["Chips, Salted", "Sandwich"]	1
+["Juice", "Sandwich"]	1
+["Ice Cream", "Sandwich"]	1
+["Ice Cream", "Juice"]	1
+["Ice Cream", "Water Bottle"]	1
+["Juice", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Ice Cream", "Water Bottle"]	1
+["Coffee", "Paneer Roll"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Tea"]	1
+["Paneer Roll", "Sandwich"]	1
+["Paneer Roll", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Ice Cream"]	1
+["Coffee", "Paneer Roll"]	1
+["Juice", "Samosa"]	1
+["Samosa", "Tea"]	1
+["Juice", "Paneer Roll"]	1
+["Coffee", "Sandwich"]	1
+["Juice", "Samosa"]	1
+["Cookies", "Juice"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Paneer Roll"]	1
+["Coffee", "Samosa"]	1
+["Paneer Roll", "Samosa"]	1
+["Cookies", "Samosa"]	1
+["Cookies", "Water Bottle"]	1
+["Samosa", "Water Bottle"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Chips, Salted", "Sandwich"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Paneer Roll", "Sandwich"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Sandwich", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Coffee"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Cookies", "Juice"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Cookies"]	1
+["Coffee", "Juice"]	1
+["Coffee", "Veg Biryani"]	1
+["Cookies", "Juice"]	1
+["Cookies", "Veg Biryani"]	1
+["Juice", "Veg Biryani"]	1
+["Juice", "Paneer Roll"]	1
+["Paneer Roll", "Sandwich"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Sandwich", "Water Bottle"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Cookies", "Samosa"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Juice", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Ice Cream", "Samosa"]	1
+["Ice Cream", "Water Bottle"]	1
+["Samosa", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Tea"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Ice Cream", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Ice Cream", "Tea"]	1
+["Chips, Salted", "Samosa"]	1
+["Chips, Salted", "Tea"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Water Bottle"]	1
+["Tea", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Coffee"]	1
+["Chips, Salted", "Juice"]	1
+["Chips, Salted", "Sandwich"]	1
+["Coffee", "Juice"]	1
+["Coffee", "Sandwich"]	1
+["Juice", "Sandwich"]	1
+["Ice Cream", "Sandwich"]	1
+["Sandwich", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Chips, Salted", "Tea"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Tea"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Tea", "Veg Biryani"]	1
+["Ice Cream", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Coffee"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Chips, Salted", "Sandwich"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Coffee", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Water Bottle"]	1
+["Sandwich", "Water Bottle"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Chips, Salted", "Tea"]	1
+["Cookies", "Tea"]	1
+["Tea", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Ice Cream", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Cookies", "Water Bottle"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Cookies", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Ice Cream"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Coffee", "Water Bottle"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Water Bottle"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Chips, Salted", "Juice"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Sandwich"]	1
+["Cookies", "Tea"]	1
+["Cookies", "Water Bottle"]	1
+["Sandwich", "Tea"]	1
+["Sandwich", "Water Bottle"]	1
+["Tea", "Water Bottle"]	1
+["Cookies", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Juice", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Juice"]	1
+["Coffee", "Paneer Roll"]	1
+["Juice", "Paneer Roll"]	1
+["Cookies", "Ice Cream"]	1
+["Cookies", "Tea"]	1
+["Ice Cream", "Tea"]	1
+["Coffee", "Cookies"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Water Bottle"]	1
+["Cookies", "Sandwich"]	1
+["Cookies", "Water Bottle"]	1
+["Sandwich", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Chips, Salted", "Coffee"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Coffee", "Veg Biryani"]	1
+["Chips, Salted", "Juice"]	1
+["Chips, Salted", "Sandwich"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Chips, Salted", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Sandwich"]	1
+["Juice", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Ice Cream", "Sandwich"]	1
+["Paneer Roll", "Sandwich"]	1
+["Paneer Roll", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Samosa", "Tea"]	1
+["Juice", "Veg Biryani"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Coffee", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Tea"]	1
+["Cookies", "Samosa"]	1
+["Cookies", "Veg Biryani"]	1
+["Samosa", "Veg Biryani"]	1
+["Coffee", "Juice"]	1
+["Coffee", "Paneer Roll"]	1
+["Juice", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Paneer Roll"]	1
+["Cookies", "Veg Biryani"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Samosa", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Ice Cream"]	1
+["Coffee", "Ice Cream"]	1
+["Coffee", "Samosa"]	1
+["Ice Cream", "Samosa"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Coffee"]	1
+["Chips, Salted", "Tea"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Coffee", "Tea"]	1
+["Coffee", "Water Bottle"]	1
+["Tea", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Chips, Salted", "Tea"]	1
+["Paneer Roll", "Tea"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Coffee", "Ice Cream"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Coffee", "Samosa"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Samosa"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Chips, Salted", "Samosa"]	1
+["Chips, Salted", "Juice"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Juice", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Juice"]	1
+["Chips, Salted", "Samosa"]	1
+["Juice", "Samosa"]	1
+["Chips, Salted", "Samosa"]	1
+["Coffee", "Sandwich"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Ice Cream", "Water Bottle"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Tea"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Juice"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Samosa"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Samosa", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Sandwich"]	1
+["Coffee", "Tea"]	1
+["Coffee", "Veg Biryani"]	1
+["Tea", "Veg Biryani"]	1
+["Coffee", "Ice Cream"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Masala \"Special\" Dosa", "Tea"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Chips, Salted", "Samosa"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Ice Cream"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Ice Cream", "Water Bottle"]	1
+["Ice Cream", "Tea"]	1
+["Cookies", "Veg Biryani"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Ice Cream", "Sandwich"]	1
+["Ice Cream", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Paneer Roll", "Sandwich"]	1
+["Juice", "Samosa"]	1
+["Juice", "Water Bottle"]	1
+["Samosa", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Tea", "Veg Biryani"]	1
+["Cookies", "Juice"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Veg Biryani"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Juice", "Samosa"]	1
+["Ice Cream", "Veg Biryani"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Juice", "Veg Biryani"]	1
+["Cookies", "Samosa"]	1
+["Chips, Salted", "Samosa"]	1
+["Juice", "Paneer Roll"]	1
+["Juice", "Tea"]	1
+["Juice", "Water Bottle"]	1
+["Paneer Roll", "Tea"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Tea", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Tea"]	1
+["Sandwich", "Veg Biryani"]	1
+["Sandwich", "Water Bottle"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Coffee"]	1
+["Chips, Salted", "Ice Cream"]	1
+["Chips, Salted", "Juice"]	1
+["Coffee", "Ice Cream"]	1
+["Coffee", "Juice"]	1
+["Ice Cream", "Juice"]	1
+["Chips, Salted", "Juice"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Cookies"]	1
+["Coffee", "Paneer Roll"]	1
+["Cookies", "Paneer Roll"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Chips, Salted", "Tea"]	1
+["Paneer Roll", "Tea"]	1
+["Samosa", "Tea"]	1
+["Juice", "Sandwich"]	1
+["Ice Cream", "Sandwich"]	1
+["Ice Cream", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Samosa", "Tea"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Samosa", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Ice Cream"]	1
+["Coffee", "Juice"]	1
+["Ice Cream", "Juice"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Veg Biryani"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Water Bottle"]	1
+["Coffee", "Ice Cream"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Cookies", "Veg Biryani"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Samosa"]	1
+["Coffee", "Veg Biryani"]	1
+["Samosa", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Tea", "Water Bottle"]	1
+["Juice", "Samosa"]	1
+["Ice Cream", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Veg Biryani"]	1
+["Cookies", "Juice"]	1
+["Chips, Salted", "Coffee"]	1
+["Chips, Salted", "Cookies"]	1
+["Coffee", "Cookies"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Juice", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Tea"]	1
+["Chips, Salted", "Ice Cream"]	1
+["Coffee", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Chips, Salted", "Tea"]	1
+["Chips, Salted", "Juice"]	1
+["Chips, Salted", "Samosa"]	1
+["Juice", "Samosa"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Juice", "Sandwich"]	1
+["Juice", "Tea"]	1
+["Masala \"Special\" Dosa", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Sandwich", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Juice"]	1
+["Cookies", "Veg Biryani"]	1
+["Juice", "Veg Biryani"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Cookies"]	1
+["Samosa", "Tea"]	1
+["Ice Cream", "Juice"]	1
+["Ice Cream", "Tea"]	1
+["Juice", "Tea"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Paneer Roll", "Samosa"]	1
+["Juice", "Samosa"]	1
+["Samosa", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Cookies", "Juice"]	1
+["Cookies", "Veg Biryani"]	1
+["Juice", "Veg Biryani"]	1
+["Sandwich", "Tea"]	1
+["Juice", "Tea"]	1
+["Samosa", "Tea"]	1
+["Ice Cream", "Juice"]	1
+["Coffee", "Sandwich"]	1
+["Ice Cream", "Samosa"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Samosa"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Samosa", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Samosa"]	1
+["Coffee", "Veg Biryani"]	1
+["Samosa", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Samosa"]	1
+["Cookies", "Water Bottle"]	1
+["Samosa", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Juice", "Sandwich"]	1
+["Juice", "Veg Biryani"]	1
+["Sandwich", "Veg Biryani"]	1
+["Chips, Salted", "Coffee"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Coffee", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Tea"]	1
+["Cookies", "Ice Cream"]	1
+["Cookies", "Water Bottle"]	1
+["Ice Cream", "Water Bottle"]	1
+["Sandwich", "Veg Biryani"]	1
+["Coffee", "Cookies"]	1
+["Coffee", "Veg Biryani"]	1
+["Cookies", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Samosa", "Tea"]	1
+["Juice", "Paneer Roll"]	1
+["Juice", "Sandwich"]	1
+["Paneer Roll", "Sandwich"]	1
+["Chips, Salted", "Tea"]	1
+["Samosa", "Tea"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Samosa", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Samosa", "Veg Biryani"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Coffee"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Coffee", "Paneer Roll"]	1
+["Coffee", "Water Bottle"]	1
+["Juice", "Paneer Roll"]	1
+["Juice", "Water Bottle"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Ice Cream", "Juice"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Veg Biryani"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Juice", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Samosa", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Ice Cream"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Chips, Salted", "Samosa"]	1
+["Paneer Roll", "Samosa"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Juice"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Chips, Salted", "Tea"]	1
+["Juice", "Paneer Roll"]	1
+["Juice", "Tea"]	1
+["Paneer Roll", "Tea"]	1
+["Ice Cream", "Sandwich"]	1
+["Ice Cream", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Paneer Roll", "Tea"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Tea", "Veg Biryani"]	1
+["Tea", "Water Bottle"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Samosa", "Sandwich"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Coffee", "Paneer Roll"]	1
+["Coffee", "Water Bottle"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Ice Cream", "Samosa"]	1
+["Ice Cream", "Water Bottle"]	1
+["Samosa", "Water Bottle"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Tea"]	1
+["Masala \"Special\" Dosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Samosa"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Paneer Roll", "Tea"]	1
+["Paneer Roll", "Tea"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Tea", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Ice Cream", "Samosa"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Paneer Roll", "Samosa"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Ice Cream", "Juice"]	1
+["Ice Cream", "Water Bottle"]	1
+["Juice", "Water Bottle"]	1
+["Chips, Salted", "Coffee"]	1
+["Chips, Salted", "Tea"]	1
+["Coffee", "Tea"]	1
+["Chips, Salted", "Cookies"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Cookies", "Paneer Roll"]	1
+["Cookies", "Samosa"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Paneer Roll", "Samosa"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Ice Cream"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Samosa", "Veg Biryani"]	1
+["Chips, Salted", "Juice"]	1
+["Paneer Roll", "Tea"]	1
+["Coffee", "Cookies"]	1
+["Coffee", "Ice Cream"]	1
+["Coffee", "Paneer Roll"]	1
+["Cookies", "Ice Cream"]	1
+["Cookies", "Paneer Roll"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Samosa", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Samosa", "Water Bottle"]	1
+["Cookies", "Tea"]	1
+["Coffee", "Paneer Roll"]	1
+["Coffee", "Samosa"]	1
+["Coffee", "Veg Biryani"]	1
+["Paneer Roll", "Samosa"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Samosa", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Juice"]	1
+["Coffee", "Paneer Roll"]	1
+["Coffee", "Samosa"]	1
+["Juice", "Paneer Roll"]	1
+["Juice", "Samosa"]	1
+["Paneer Roll", "Samosa"]	1
+["Chips, Salted", "Coffee"]	1
+["Sandwich", "Tea"]	1
+["Chips, Salted", "Coffee"]	1
+["Chips, Salted", "Cookies"]	1
+["Coffee", "Cookies"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Ice Cream"]	1
+["Coffee", "Juice"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Coffee", "Samosa"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Juice", "Samosa"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Sandwich", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Juice", "Samosa"]	1
+["Coffee", "Sandwich"]	1
+["Paneer Roll", "Samosa"]	1
+["Paneer Roll", "Sandwich"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Samosa", "Sandwich"]	1
+["Samosa", "Veg Biryani"]	1
+["Sandwich", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Tea"]	1
+["Cookies", "Water Bottle"]	1
+["Tea", "Water Bottle"]	1
+["Chips, Salted", "Juice"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Coffee", "Sandwich"]	1
+["Juice", "Samosa"]	1
+["Samosa", "Tea"]	1
+["Ice Cream", "Samosa"]	1
+["Ice Cream", "Sandwich"]	1
+["Ice Cream", "Water Bottle"]	1
+["Samosa", "Sandwich"]	1
+["Samosa", "Water Bottle"]	1
+["Sandwich", "Water Bottle"]	1
+["Ice Cream", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Coffee"]	1
+["Chips, Salted", "Ice Cream"]	1
+["Chips, Salted", "Sandwich"]	1
+["Coffee", "Ice Cream"]	1
+["Coffee", "Sandwich"]	1
+["Ice Cream", "Sandwich"]	1
+["Chips, Salted", "Cookies"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Ice Cream", "Sandwich"]	1
+["Ice Cream", "Water Bottle"]	1
+["Sandwich", "Water Bottle"]	1
+["Chips, Salted", "Coffee"]	1
+["Cookies", "Ice Cream"]	1
+["Cookies", "Juice"]	1
+["Cookies", "Water Bottle"]	1
+["Ice Cream", "Juice"]	1
+["Ice Cream", "Water Bottle"]	1
+["Juice", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Samosa"]	1
+["Coffee", "Tea"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Water Bottle"]	1
+["Coffee", "Cookies"]	1
+["Ice Cream", "Sandwich"]	1
+["Ice Cream", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Chips, Salted", "Cookies"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Juice"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Juice", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Tea", "Water Bottle"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Tea"]	1
+["Cookies", "Veg Biryani"]	1
+["Tea", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Ice Cream", "Juice"]	1
+["Ice Cream", "Sandwich"]	1
+["Ice Cream", "Veg Biryani"]	1
+["Juice", "Sandwich"]	1
+["Juice", "Veg Biryani"]	1
+["Sandwich", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Sandwich", "Water Bottle"]	1
+["Paneer Roll", "Samosa"]	1
+["Paneer Roll", "Sandwich"]	1
+["Samosa", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Samosa"]	1
+["Cookies", "Water Bottle"]	1
+["Samosa", "Water Bottle"]	1
+["Ice Cream", "Veg Biryani"]	1
+["Ice Cream", "Water Bottle"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Masala \"Special\" Dosa", "Sandwich"]	1
+["Samosa", "Sandwich"]	1
+["Coffee", "Samosa"]	1
+["Coffee", "Veg Biryani"]	1
+["Samosa", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Cookies", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Chips, Salted", "Cookies"]	1
+["Coffee", "Cookies"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Sandwich"]	1
+["Sandwich", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Cookies"]	1
+["Chips, Salted", "Ice Cream"]	1
+["Cookies", "Ice Cream"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Coffee", "Cookies"]	1
+["Coffee", "Samosa"]	1
+["Coffee", "Tea"]	1
+["Cookies", "Samosa"]	1
+["Cookies", "Tea"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Samosa"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Coffee"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Coffee", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Chips, Salted", "Ice Cream"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Ice Cream"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Cookies", "Samosa"]	1
+["Cookies", "Sandwich"]	1
+["Samosa", "Sandwich"]	1
+["Ice Cream", "Sandwich"]	1
+["Ice Cream", "Tea"]	1
+["Ice Cream", "Veg Biryani"]	1
+["Sandwich", "Tea"]	1
+["Sandwich", "Veg Biryani"]	1
+["Tea", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Ice Cream"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Cookies"]	1
+["Chips, Salted", "Tea"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Cookies", "Tea"]	1
+["Cookies", "Veg Biryani"]	1
+["Tea", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Cookies"]	1
+["Coffee", "Paneer Roll"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Paneer Roll"]	1
+["Cookies", "Sandwich"]	1
+["Paneer Roll", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Ice Cream"]	1
+["Cookies", "Tea"]	1
+["Ice Cream", "Tea"]	1
+["Coffee", "Ice Cream"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Chips, Salted", "Juice"]	1
+["Chips, Salted", "Samosa"]	1
+["Juice", "Samosa"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Ice Cream", "Veg Biryani"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Water Bottle"]	1
+["Ice Cream", "Juice"]	1
+["Ice Cream", "Water Bottle"]	1
+["Juice", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Chips, Salted", "Samosa"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Samosa", "Water Bottle"]	1
+["Chips, Salted", "Samosa"]	1
+["Paneer Roll", "Sandwich"]	1
+["Juice", "Veg Biryani"]	1
+["Chips, Salted", "Juice"]	1
+["Chips, Salted", "Sandwich"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Juice", "Sandwich"]	1
+["Juice", "Veg Biryani"]	1
+["Sandwich", "Veg Biryani"]	1
+["Samosa", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Juice"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Samosa", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Cookies", "Samosa"]	1
+["Cookies", "Water Bottle"]	1
+["Samosa", "Water Bottle"]	1
+["Coffee", "Ice Cream"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Coffee", "Sandwich"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Tea", "Water Bottle"]	1
+["Ice Cream", "Juice"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Ice Cream", "Veg Biryani"]	1
+["Juice", "Paneer Roll"]	1
+["Juice", "Veg Biryani"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Samosa", "Sandwich"]	1
+["Coffee", "Paneer Roll"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Paneer Roll", "Sandwich"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Sandwich", "Water Bottle"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Juice", "Veg Biryani"]	1
+["Juice", "Water Bottle"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Samosa"]	1
+["Sandwich", "Water Bottle"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Cookies", "Samosa"]	1
+["Cookies", "Sandwich"]	1
+["Samosa", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Ice Cream"]	1
+["Chips, Salted", "Juice"]	1
+["Chips, Salted", "Sandwich"]	1
+["Ice Cream", "Juice"]	1
+["Ice Cream", "Sandwich"]	1
+["Juice", "Sandwich"]	1
+["Tea", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Juice"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Coffee", "Samosa"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Paneer Roll"]	1
+["Cookies", "Water Bottle"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Samosa", "Sandwich"]	1
+["Samosa", "Veg Biryani"]	1
+["Sandwich", "Veg Biryani"]	1
+["Cookies", "Paneer Roll"]	1
+["Cookies", "Veg Biryani"]	1
+["Cookies", "Water Bottle"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Tea"]	1
+["Chips, Salted", "Ice Cream"]	1
+["Chips, Salted", "Juice"]	1
+["Ice Cream", "Juice"]	1
+["Cookies", "Juice"]	1
+["Cookies", "Samosa"]	1
+["Juice", "Samosa"]	1
+["Tea", "Veg Biryani"]	1
+["Tea", "Water Bottle"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Paneer Roll", "Tea"]	1
+["Chips, Salted", "Juice"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Juice", "Veg Biryani"]	1
+["Paneer Roll", "Tea"]	1
+["Cookies", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Coffee"]	1
+["Chips, Salted", "Tea"]	1
+["Coffee", "Tea"]	1
+["Ice Cream", "Veg Biryani"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Juice"]	1
+["Coffee", "Paneer Roll"]	1
+["Coffee", "Veg Biryani"]	1
+["Juice", "Paneer Roll"]	1
+["Juice", "Veg Biryani"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Coffee", "Cookies"]	1
+["Coffee", "Tea"]	1
+["Cookies", "Tea"]	1
+["Cookies", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Ice Cream", "Samosa"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Ice Cream", "Samosa"]	1
+["Paneer Roll", "Samosa"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Sandwich", "Veg Biryani"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Chips, Salted", "Sandwich"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Sandwich", "Veg Biryani"]	1
+["Chips, Salted", "Juice"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Juice", "Water Bottle"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Samosa"]	1
+["Sandwich", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Paneer Roll", "Tea"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Chips, Salted", "Sandwich"]	1
+["Paneer Roll", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Samosa"]	1
+["Cookies", "Water Bottle"]	1
+["Samosa", "Water Bottle"]	1
+["Cookies", "Paneer Roll"]	1
+["Cookies", "Samosa"]	1
+["Cookies", "Water Bottle"]	1
+["Paneer Roll", "Samosa"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Samosa", "Water Bottle"]	1
+["Coffee", "Cookies"]	1
+["Coffee", "Tea"]	1
+["Cookies", "Tea"]	1
+["Juice", "Paneer Roll"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Juice"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Cookies", "Water Bottle"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Juice", "Water Bottle"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Ice Cream", "Samosa"]	1
+["Ice Cream", "Tea"]	1
+["Ice Cream", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Water Bottle"]	1
+["Tea", "Water Bottle"]	1
+["Coffee", "Tea"]	1
+["Juice", "Paneer Roll"]	1
+["Chips, Salted", "Coffee"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Samosa", "Tea"]	1
+["Paneer Roll", "Tea"]	1
+["Coffee", "Ice Cream"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Juice"]	1
+["Ice Cream", "Veg Biryani"]	1
+["Chips, Salted", "Ice Cream"]	1
+["Chips, Salted", "Sandwich"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Ice Cream", "Sandwich"]	1
+["Ice Cream", "Veg Biryani"]	1
+["Sandwich", "Veg Biryani"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Cookies"]	1
+["Coffee", "Sandwich"]	1
+["Paneer Roll", "Sandwich"]	1
+["Chips, Salted", "Cookies"]	1
+["Chips, Salted", "Juice"]	1
+["Cookies", "Juice"]	1
+["Coffee", "Paneer Roll"]	1
+["Coffee", "Water Bottle"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Juice"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Coffee", "Sandwich"]	1
+["Paneer Roll", "Samosa"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Sandwich"]	1
+["Samosa", "Water Bottle"]	1
+["Sandwich", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Coffee", "Sandwich"]	1
+["Paneer Roll", "Samosa"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Paneer Roll"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Samosa", "Veg Biryani"]	1
+["Chips, Salted", "Coffee"]	1
+["Chips, Salted", "Samosa"]	1
+["Coffee", "Samosa"]	1
+["Ice Cream", "Juice"]	1
+["Juice", "Samosa"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Juice"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Cookies", "Water Bottle"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Juice", "Water Bottle"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Juice", "Samosa"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Chips, Salted", "Tea"]	1
+["Paneer Roll", "Tea"]	1
+["Juice", "Sandwich"]	1
+["Tea", "Veg Biryani"]	1
+["Coffee", "Sandwich"]	1
+["Ice Cream", "Samosa"]	1
+["Chips, Salted", "Tea"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Sandwich"]	1
+["Cookies", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Sandwich"]	1
+["Chips, Salted", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Juice", "Samosa"]	1
+["Juice", "Tea"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Paneer Roll"]	1
+["Cookies", "Samosa"]	1
+["Paneer Roll", "Samosa"]	1
+["Coffee", "Ice Cream"]	1
+["Chips, Salted", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Juice", "Samosa"]	1
+["Juice", "Water Bottle"]	1
+["Samosa", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Juice"]	1
+["Cookies", "Sandwich"]	1
+["Cookies", "Veg Biryani"]	1
+["Juice", "Sandwich"]	1
+["Juice", "Veg Biryani"]	1
+["Sandwich", "Veg Biryani"]	1
+["Ice Cream", "Sandwich"]	1
+["Coffee", "Veg Biryani"]	1
+["Juice", "Sandwich"]	1
+["Chips, Salted", "Coffee"]	1
+["Coffee", "Sandwich"]	1
+["Ice Cream", "Water Bottle"]	1
+["Chips, Salted", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Coffee", "Sandwich"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Coffee", "Paneer Roll"]	1
+["Coffee", "Water Bottle"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Juice", "Sandwich"]	1
+["Juice", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Coffee", "Juice"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Sandwich", "Veg Biryani"]	1
+["Sandwich", "Water Bottle"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Cookies", "Tea"]	1
+["Cookies", "Water Bottle"]	1
+["Tea", "Water Bottle"]	1
+["Coffee", "Cookies"]	1
+["Coffee", "Veg Biryani"]	1
+["Cookies", "Veg Biryani"]	1
+["Ice Cream", "Sandwich"]	1
+["Ice Cream", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Paneer Roll", "Tea"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Sandwich"]	1
+["Samosa", "Veg Biryani"]	1
+["Samosa", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Juice", "Tea"]	1
+["Samosa", "Tea"]	1
+["Ice Cream", "Water Bottle"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Coffee", "Tea"]	1
+["Chips, Salted", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Juice", "Water Bottle"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Cookies", "Sandwich"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Coffee", "Paneer Roll"]	1
+["Coffee", "Sandwich"]	1
+["Ice Cream", "Veg Biryani"]	1
+["Cookies", "Paneer Roll"]	1
+["Cookies", "Tea"]	1
+["Paneer Roll", "Tea"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Cookies"]	1
+["Chips, Salted", "Ice Cream"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Cookies", "Ice Cream"]	1
+["Cookies", "Paneer Roll"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Cookies"]	1
+["Coffee", "Tea"]	1
+["Cookies", "Tea"]	1
+["Juice", "Paneer Roll"]	1
+["Juice", "Tea"]	1
+["Paneer Roll", "Tea"]	1
+["Cookies", "Sandwich"]	1
+["Cookies", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Juice", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Ice Cream", "Juice"]	1
+["Sandwich", "Veg Biryani"]	1
+["Paneer Roll", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Ice Cream"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Cookies"]	1
+["Coffee", "Paneer Roll"]	1
+["Coffee", "Samosa"]	1
+["Cookies", "Paneer Roll"]	1
+["Cookies", "Samosa"]	1
+["Paneer Roll", "Samosa"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Chips, Salted", "Tea"]	1
+["Paneer Roll", "Tea"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Coffee"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Coffee", "Veg Biryani"]	1
+["Paneer Roll", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Ice Cream"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Chips, Salted", "Samosa"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Ice Cream", "Samosa"]	1
+["Paneer Roll", "Samosa"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Juice"]	1
+["Coffee", "Paneer Roll"]	1
+["Coffee", "Water Bottle"]	1
+["Juice", "Paneer Roll"]	1
+["Juice", "Water Bottle"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Cookies", "Sandwich"]	1
+["Cookies", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Samosa", "Water Bottle"]	1
+["Chips, Salted", "Tea"]	1
+["Sandwich", "Veg Biryani"]	1
+["Juice", "Samosa"]	1
+["Juice", "Sandwich"]	1
+["Juice", "Water Bottle"]	1
+["Samosa", "Sandwich"]	1
+["Samosa", "Water Bottle"]	1
+["Sandwich", "Water Bottle"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Coffee", "Cookies"]	1
+["Coffee", "Tea"]	1
+["Cookies", "Tea"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Ice Cream", "Juice"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Cookies"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Cookies", "Water Bottle"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Cookies", "Ice Cream"]	1
+["Cookies", "Veg Biryani"]	1
+["Ice Cream", "Veg Biryani"]	1
+["Cookies", "Veg Biryani"]	1
+["Cookies", "Water Bottle"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Sandwich", "Tea"]	1
+["Cookies", "Water Bottle"]	1
+["Coffee", "Samosa"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Cookies", "Ice Cream"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Water Bottle"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Ice Cream", "Juice"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Ice Cream"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Cookies", "Paneer Roll"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Cookies", "Tea"]	1
+["Cookies", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Tea"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Tea", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Cookies"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Cookies", "Paneer Roll"]	1
+["Chips, Salted", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Sandwich"]	1
+["Juice", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Sandwich"]	1
+["Paneer Roll", "Tea"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Juice"]	1
+["Paneer Roll", "Sandwich"]	1
+["Chips, Salted", "Cookies"]	1
+["Samosa", "Tea"]	1
+["Juice", "Veg Biryani"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Juice", "Sandwich"]	1
+["Juice", "Water Bottle"]	1
+["Masala \"Special\" Dosa", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Sandwich", "Water Bottle"]	1
+["Cookies", "Samosa"]	1
+["Cookies", "Veg Biryani"]	1
+["Samosa", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Juice", "Samosa"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Sandwich"]	1
+["Coffee", "Paneer Roll"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Cookies", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Coffee", "Juice"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Coffee", "Sandwich"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Juice", "Tea"]	1
+["Masala \"Special\" Dosa", "Tea"]	1
+["Coffee", "Ice Cream"]	1
+["Coffee", "Tea"]	1
+["Coffee", "Water Bottle"]	1
+["Ice Cream", "Tea"]	1
+["Ice Cream", "Water Bottle"]	1
+["Tea", "Water Bottle"]	1
+["Paneer Roll", "Tea"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Chips, Salted", "Cookies"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Samosa", "Tea"]	1
+["Ice Cream", "Tea"]	1
+["Chips, Salted", "Coffee"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Coffee", "Paneer Roll"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Ice Cream"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Cookies", "Paneer Roll"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Samosa", "Tea"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Samosa"]	1
+["Coffee", "Sandwich"]	1
+["Tea", "Veg Biryani"]	1
+["Tea", "Water Bottle"]	1
+["Chips, Salted", "Tea"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Tea", "Water Bottle"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Coffee", "Sandwich"]	1
+["Ice Cream", "Tea"]	1
+["Chips, Salted", "Ice Cream"]	1
+["Chips, Salted", "Juice"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Ice Cream", "Juice"]	1
+["Ice Cream", "Water Bottle"]	1
+["Juice", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Cookies", "Paneer Roll"]	1
+["Cookies", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Coffee", "Paneer Roll"]	1
+["Coffee", "Sandwich"]	1
+["Paneer Roll", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Samosa"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Samosa", "Veg Biryani"]	1
+["Paneer Roll", "Sandwich"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Sandwich", "Water Bottle"]	1
+["Cookies", "Ice Cream"]	1
+["Cookies", "Sandwich"]	1
+["Cookies", "Tea"]	1
+["Ice Cream", "Sandwich"]	1
+["Ice Cream", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Ice Cream", "Juice"]	1
+["Ice Cream", "Samosa"]	1
+["Ice Cream", "Sandwich"]	1
+["Juice", "Samosa"]	1
+["Juice", "Sandwich"]	1
+["Samosa", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Cookies", "Water Bottle"]	1
+["Coffee", "Samosa"]	1
+["Samosa", "Tea"]	1
+["Paneer Roll", "Samosa"]	1
+["Coffee", "Water Bottle"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Juice", "Sandwich"]	1
+["Juice", "Water Bottle"]	1
+["Masala \"Special\" Dosa", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Sandwich", "Water Bottle"]	1
+["Coffee", "Juice"]	1
+["Coffee", "Samosa"]	1
+["Coffee", "Sandwich"]	1
+["Juice", "Samosa"]	1
+["Juice", "Sandwich"]	1
+["Samosa", "Sandwich"]	1
+["Cookies", "Tea"]	1
+["Cookies", "Water Bottle"]	1
+["Tea", "Water Bottle"]	1
+["Chips, Salted", "Cookies"]	1
+["Chips, Salted", "Samosa"]	1
+["Chips, Salted", "Tea"]	1
+["Cookies", "Samosa"]	1
+["Cookies", "Tea"]	1
+["Samosa", "Tea"]	1
+["Ice Cream", "Water Bottle"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Chips, Salted", "Coffee"]	1
+["Sandwich", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Cookies"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Chips, Salted", "Coffee"]	1
+["Chips, Salted", "Ice Cream"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Coffee", "Ice Cream"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Samosa", "Tea"]	1
+["Juice", "Tea"]	1
+["Juice", "Water Bottle"]	1
+["Tea", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Ice Cream"]	1
+["Cookies", "Tea"]	1
+["Ice Cream", "Tea"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Coffee", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Cookies"]	1
+["Chips, Salted", "Tea"]	1
+["Cookies", "Tea"]	1
+["Chips, Salted", "Coffee"]	1
+["Cookies", "Veg Biryani"]	1
+["Coffee", "Cookies"]	1
+["Coffee", "Tea"]	1
+["Cookies", "Tea"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Tea"]	1
+["Paneer Roll", "Tea"]	1
+["Juice", "Samosa"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Paneer Roll"]	1
+["Chips, Salted", "Samosa"]	1
+["Paneer Roll", "Samosa"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Tea"]	1
+["Paneer Roll", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Tea"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Coffee", "Sandwich"]	1
+["Cookies", "Tea"]	1
+["Chips, Salted", "Samosa"]	1
+["Chips, Salted", "Sandwich"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Samosa", "Sandwich"]	1
+["Samosa", "Veg Biryani"]	1
+["Sandwich", "Veg Biryani"]	1
+["Paneer Roll", "Samosa"]	1
+["Coffee", "Ice Cream"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Coffee", "Water Bottle"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Water Bottle"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Coffee", "Ice Cream"]	1
+["Cookies", "Masala \"Special\" Dosa"]	1
+["Cookies", "Samosa"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Paneer Roll", "Samosa"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Ice Cream", "Tea"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Tea"]	1
+["Paneer Roll", "Tea"]	1
+["Cookies", "Ice Cream"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Ice Cream", "Tea"]	1
+["Ice Cream", "Veg Biryani"]	1
+["Paneer Roll", "Tea"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Tea", "Veg Biryani"]	1
+["Masala \"Special\" Dosa", "Tea"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Tea", "Veg Biryani"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Samosa", "Tea"]	1
+["Sandwich", "Veg Biryani"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Tea"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Tea"]	1
+["Coffee", "Water Bottle"]	1
+["Tea", "Water Bottle"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Chips, Salted", "Sandwich"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Juice", "Veg Biryani"]	1
+["Ice Cream", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Veg Biryani"]	1
+["Cookies", "Sandwich"]	1
+["Cookies", "Tea"]	1
+["Sandwich", "Tea"]	1
+["Samosa", "Water Bottle"]	1
+["Ice Cream", "Water Bottle"]	1
+["Sandwich", "Tea"]	1
+["Cookies", "Sandwich"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Ice Cream", "Juice"]	1
+["Ice Cream", "Samosa"]	1
+["Ice Cream", "Tea"]	1
+["Juice", "Samosa"]	1
+["Juice", "Tea"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Juice"]	1
+["Coffee", "Masala \"Special\" Dosa"]	1
+["Coffee", "Water Bottle"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Juice", "Water Bottle"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Coffee", "Juice"]	1
+["Coffee", "Paneer Roll"]	1
+["Coffee", "Veg Biryani"]	1
+["Juice", "Paneer Roll"]	1
+["Juice", "Veg Biryani"]	1
+["Paneer Roll", "Veg Biryani"]	1
+["Coffee", "Sandwich"]	1
+["Chips, Salted", "Sandwich"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Sandwich", "Veg Biryani"]	1
+["Samosa", "Tea"]	1
+["Paneer Roll", "Tea"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Masala \"Special\" Dosa"]	1
+["Chips, Salted", "Water Bottle"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Cookies", "Veg Biryani"]	1
+["Juice", "Masala \"Special\" Dosa"]	1
+["Juice", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Veg Biryani"]	1
+["Samosa", "Water Bottle"]	1
+["Veg Biryani", "Water Bottle"]	1
+["Cookies", "Tea"]	1
+["Cookies", "Water Bottle"]	1
+["Tea", "Water Bottle"]	1
+["Cookies", "Tea"]	1
+["Masala \"Special\" Dosa", "Sandwich"]	1
+["Masala \"Special\" Dosa", "Veg Biryani"]	1
+["Sandwich", "Veg Biryani"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Ice Cream"]	1
+["Coffee", "Paneer Roll"]	1
+["Coffee", "Tea"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Ice Cream", "Tea"]	1
+["Paneer Roll", "Tea"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Juice"]	1
+["Coffee", "Veg Biryani"]	1
+["Ice Cream", "Paneer Roll"]	1
+["Coffee", "Sandwich"]	1
+["Tea", "Water Bottle"]	1
+["Juice", "Water Bottle"]	1
+["Juice", "Water Bottle"]	1
+["Cookies", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Coffee", "Cookies"]	1
+["Coffee", "Paneer Roll"]	1
+["Cookies", "Paneer Roll"]	1
+["Cookies", "Sandwich"]	1
+["Samosa", "Tea"]	1
+["Samosa", "Veg Biryani"]	1
+["Tea", "Veg Biryani"]	1
+["Juice", "Samosa"]	1
+["Masala \"Special\" Dosa", "Paneer Roll"]	1
+["Masala \"Special\" Dosa", "Water Bottle"]	1
+["Paneer Roll", "Water Bottle"]	1
+["Paneer Roll", "Sandwich"]	1
+["Paneer Roll", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Coffee", "Juice"]	1
+["Samosa", "Tea"]	1
+["Chips, Salted", "Samosa"]	1
+["Chips, Salted", "Veg Biryani"]	1
+["Samosa", "Veg Biryani"]	1
+["Ice Cream", "Masala \"Special\" Dosa"]	1
+["Ice Cream", "Samosa"]	1
+["Ice Cream", "Tea"]	1
+["Masala \"Special\" Dosa", "Samosa"]	1
+["Masala \"Special\" Dosa", "Tea"]	1
+["Samosa", "Tea"]	1
+["Cookies", "Water Bottle"]	1
+["Cookies", "Ice Cream"]	1
+["Cookies", "Veg Biryani"]	1
+["Ice Cream", "Veg Biryani"]	1
+["Cookies", "Sandwich"]	1
+["Cookies", "Paneer Roll"]	1
+["Juice", "Sandwich"]	1
+["Coffee", "Sandwich"]	1
+["Samosa", "Tea"]	1

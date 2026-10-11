@@ -112,10 +112,11 @@ hadoop jar $JAR -files src/job1_wifi_mapper.py,src/job1_wifi_reducer.py,src/sum_
 # Job 6: key "RouteID|Hour" is correct with default settings; these options only add RouteID partitioning
 hadoop jar $JAR -D mapreduce.map.output.key.field.separator='|' \
   -D mapreduce.partition.keypartitioner.options=-k1,1 \
-  -partitioner org.apache.hadoop.mapred.lib.KeyFieldBasedPartitioner \
   -files src/job6_transport_mapper.py,src/job6_transport_reducer.py,src/sum_combiner.py,src/mr_common.py \
   -input /campus/in/transport.csv -output /campus/out/job6 \
-  -mapper "python3 job6_transport_mapper.py" -combiner "python3 sum_combiner.py" -reducer "python3 job6_transport_reducer.py"
+  -mapper "python3 job6_transport_mapper.py" -combiner "python3 sum_combiner.py" -reducer "python3 job6_transport_reducer.py" \
+  -partitioner org.apache.hadoop.mapred.lib.KeyFieldBasedPartitioner
+# Order matters: generic options (-D, -files) must precede streaming options (-mapper, -partitioner, ...)
 # Job 4: stage 1 -> /campus/out/job4s1, then stage 2 with -input /campus/out/job4s1
 # Job 5: stage1 -> /campus/out/job5s1; global (-D mapreduce.job.reduces=1) -> /campus/out/job5g;
 #        filter with -files ...,hdfs:///campus/out/job5g/part-00000#global_stats.txt -input /campus/out/job5s1
@@ -126,8 +127,8 @@ hdfs dfs -cat /campus/out/job1/part-* | sort
 | Status | What |
 |--------|------|
 | **A. Verified locally** | All six jobs and every stage. 36 unit/integration tests, including reducers run under Hadoop-style key-only sorting. Every output row matches an independent reference implementation. Identical results with and without the combiner, and with 1/3/4 map tasks and 1/3/4 reducers. Failure propagation. Reproducible generator. 1M-row Job 1 benchmark. |
-| **B. Verified on Hadoop** | Nothing. Hadoop is not installed in the development environment. |
-| **C. Not yet verified** | `scripts/run_hadoop.sh` against real Hadoop (only tested against a stub that mimics Streaming semantics), the Hadoop commands above, `-files` symlink imports of `mr_common.py`, KeyFieldBasedPartitioner options, the distributed-cache `#global_stats.txt` symlink, and whether TextOutputFormat appends a trailing TAB to the no-TAB CSV lines from final reducers. |
+| **B. Verified on Hadoop** | **Hadoop 3.5.0, standalone mode (LocalJobRunner), OpenJDK 17, macOS, 11 Oct 2026.** `scripts/run_hadoop.sh` ran all nine stages, and all six final outputs are identical to the local outputs. Confirmed along the way: `-files` imports of `mr_common.py`, the combiner (Job 1: 5,000 → 112 records), the Job 6 KeyFieldBasedPartitioner options, the Job 5 distributed-cache `#global_stats.txt` file, and the SmartCampus rejection counters in Hadoop's counter report. Hadoop **does** append a trailing TAB to final CSV lines (F6). The script strips it when comparing. |
+| **C. Not yet verified** | A multi-node cluster or pseudo-distributed HDFS/YARN setup (standalone mode uses one JVM and the local filesystem), more than one reducer on real Hadoop, and the manual HDFS commands above. |
 
 ## Screenshots (submission requirement)
 They can't be captured from this environment. To produce them, run these commands and screenshot

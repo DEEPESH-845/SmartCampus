@@ -13,10 +13,12 @@ and the tests were checked by mutation. Severity: Critical / High / Medium / Low
 | F3 | Medium | Data integrity (E) | `Decimal()` accepts `1_000` and `strptime` accepts unpadded `2026-8-1 9:5`. Both are outside the documented format. | Rejected (`bad_<field>`, `bad_timestamp`). Test `test_underscore_numbers_and_unpadded_timestamps_rejected`. |
 | F4 | Medium | Algorithm (B) | The Job 5 filter reducer "summed" its 4-value records, so a duplicated student line would have doubled the global totals used in its output columns. | Now requires exactly one record per student, otherwise it exits non-zero. Test added. |
 | F5 | Medium | Validation report (N) | The invariant "J6 status agrees with average" accepted any status when the displayed average was exactly 20.0, a loophole wider than needed. | Now skips only rows displayed as `20.00`, where display rounding makes the check undecidable. The exact check is done by the independent reference on every row. |
-| F6 | Medium | Hadoop claims (N) | Final reducers print CSV lines without a TAB. Hadoop Streaming's TextOutputFormat is widely reported to append a trailing TAB to such lines. Not verifiable here. | Documented as unverified in the README (status C). If it is observed, strip it when merging: `hdfs dfs -cat …/part-* \| sed 's/\t$//'`. |
+| F6 | Medium | Hadoop claims (N) | Final reducers print CSV lines without a TAB. Hadoop Streaming's TextOutputFormat is widely reported to append a trailing TAB to such lines. **Confirmed on Hadoop 3.5.0** (11 Oct 2026). | Harmless to the data. `run_hadoop.sh` strips it when comparing. To merge results, run `cat part-* \| sed 's/\t$//'`. |
 | F7 | Medium | Hadoop config (K) | The Job 5 global stage must use exactly one reducer. With more, the empty reducers each print `GLOBAL 0,0,UNDEFINED`, and the filter could be pointed at the wrong part file and silently flag no one. | The local runner forces 1 reducer. The README Hadoop instructions specify `-D mapreduce.job.reduces=1`. Not enforceable from inside a streaming script. |
 | F8 | Low | Memory (J) | Job 4 stage 1 holds the distinct items of one transaction, and pair output grows quadratically with basket size. | Accepted for this domain (baskets ≤ 5 items). Documented in ARCHITECTURE.md. |
 | F9 | Low | Interpretation (O) | Job 5 flags a student from a single long visit (S157: one 98-minute visit). This is correct per the spec but weak evidence. | Kept to the spec and noted in the interpretation. A minimum visit count is suggested as a refinement. |
+| F11 | High | Execution (K) | Found on the first real Hadoop run: `run_hadoop.sh` placed `-combiner` before `-files`. Hadoop parses generic options (`-D`, `-files`) only before streaming options, so it failed with `Unrecognized option: -files`. The README's manual Job 6 command had the same order. The test stub did not enforce ordering, so it missed this. | Fixed: `-D` options go first, streaming options go last. README corrected. |
+| F12 | Medium | Execution (K) | Hadoop turns `-files` paths into URIs. The repository path contains spaces (`Big Data project`), so it failed with `URISyntaxException: Illegal character in path`. | Fixed: the script copies `src/` and `data/` into a space-free staging folder and refuses output paths containing spaces. |
 | F10 | Low | Runner | Peak-hour and top-pair ranking use `float` on 2-decimal strings. That is exact enough for these magnitudes, and ties are compared on identical strings. | Accepted. Tie-break is tested. |
 
 ## Areas checked with no defect found
@@ -54,5 +56,5 @@ One reviewer error worth recording: the first J5 mutation run edited a docstring
 code, and the suite passed. Re-running the mutation on the actual code line was caught.
 
 ## Unresolved risks
-- Nothing has been executed on a real Hadoop cluster (F6, F7, and the `-files` import mechanism).
+- Verified on Hadoop 3.5.0 in standalone mode only. Not yet run on a multi-node cluster or with more than one reducer on real Hadoop (F7 still relies on `-D mapreduce.job.reduces=1`).
 - Results reflect synthetic generator patterns only.

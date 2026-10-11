@@ -27,30 +27,43 @@ fi
 [ -f "$JAR" ] || { echo "hadoop-streaming jar not found; set HADOOP_STREAMING_JAR"; exit 1; }
 echo "Using $JAR"
 
+case "$OUT" in *" "*) echo "OUTPUT_DIR must not contain spaces (Hadoop paths are URIs)"; exit 1;; esac
 mkdir -p "$OUT/logs"
+# Hadoop turns -files/-input paths into URIs, which reject spaces (this repo lives in
+# "Big Data project"), so run from a space-free copy of the scripts and data.
+STAGE="$OUT/stage"
+rm -rf "$STAGE" && mkdir -p "$STAGE"
+cp -R src data "$STAGE/"
 
 # run NAME INPUT MAPPER REDUCER [EXTRA_FILE] [HADOOP OPTIONS...]
 run() {
   local name=$1 input=$2 mapper=$3 reducer=$4 extra=$5; shift 5
-  local files="src/$mapper,src/$reducer,src/sum_combiner.py,src/mr_common.py${extra:+,$extra}"
+  local s="$STAGE/src"
+  local files="$s/$mapper,$s/$reducer,$s/sum_combiner.py,$s/mr_common.py${extra:+,$extra}"
+  # Hadoop parses generic options (-D, -files) only BEFORE streaming options (-combiner, -partitioner).
+  local generic=() streaming=()
+  while [ $# -gt 0 ]; do
+    if [ "$1" = "-D" ]; then generic+=("$1" "$2"); else streaming+=("$1" "$2"); fi
+    shift 2
+  done
   rm -rf "$OUT/$name"
   echo "== $name"
-  if ! hadoop jar "$JAR" "$@" -files "$files" -input "$input" -output "$OUT/$name" \
-       -mapper "$PY $mapper" -reducer "$PY $reducer" >"$OUT/logs/$name.log" 2>&1; then
+  if ! hadoop jar "$JAR" ${generic[@]+"${generic[@]}"} -files "$files" -input "$input" -output "$OUT/$name" \
+       -mapper "$PY $mapper" -reducer "$PY $reducer" ${streaming[@]+"${streaming[@]}"} >"$OUT/logs/$name.log" 2>&1; then
     echo "   FAILED - last lines of $OUT/logs/$name.log:"; tail -20 "$OUT/logs/$name.log"; exit 1
   fi
 }
 
 COMB=(-combiner "$PY sum_combiner.py")
-run job1   data/wifi_logs.csv  job1_wifi_mapper.py      job1_wifi_reducer.py      "" "${COMB[@]}"
-run job2   data/wifi_logs.csv  job2_ap_mapper.py        job2_ap_reducer.py        "" "${COMB[@]}"
-run job3   data/canteen.csv    job3_canteen_mapper.py   job3_canteen_reducer.py   "" "${COMB[@]}"
-run job4s1 data/canteen.csv    job4_stage1_mapper.py    job4_stage1_reducer.py    ""
+run job1   "$STAGE/data/wifi_logs.csv"  job1_wifi_mapper.py      job1_wifi_reducer.py      "" "${COMB[@]}"
+run job2   "$STAGE/data/wifi_logs.csv"  job2_ap_mapper.py        job2_ap_reducer.py        "" "${COMB[@]}"
+run job3   "$STAGE/data/canteen.csv"    job3_canteen_mapper.py   job3_canteen_reducer.py   "" "${COMB[@]}"
+run job4s1 "$STAGE/data/canteen.csv"    job4_stage1_mapper.py    job4_stage1_reducer.py    ""
 run job4   "$OUT/job4s1"       job4_stage2_mapper.py    job4_stage2_reducer.py    "" "${COMB[@]}"
-run job5s1 data/library.csv    job5_stage1_mapper.py    job5_stage1_reducer.py    "" "${COMB[@]}"
+run job5s1 "$STAGE/data/library.csv"    job5_stage1_mapper.py    job5_stage1_reducer.py    "" "${COMB[@]}"
 run job5g  "$OUT/job5s1"       job5_global_mapper.py    job5_global_reducer.py    "" -D mapreduce.job.reduces=1
 run job5   "$OUT/job5s1"       job5_filter_mapper.py    job5_filter_reducer.py    "$OUT/job5g/part-00000#global_stats.txt"
-run job6   data/transport.csv  job6_transport_mapper.py job6_transport_reducer.py "" \
+run job6   "$STAGE/data/transport.csv"  job6_transport_mapper.py job6_transport_reducer.py "" \
     -D mapreduce.map.output.key.field.separator='|' -D mapreduce.partition.keypartitioner.options=-k1,1 \
     -partitioner org.apache.hadoop.mapred.lib.KeyFieldBasedPartitioner "${COMB[@]}"
 

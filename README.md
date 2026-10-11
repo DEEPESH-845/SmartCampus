@@ -22,7 +22,8 @@ src/         mr_common.py            shared validation + grouping helpers (shipp
              job6_transport_{mapper,reducer}.py sum_combiner.py (optional combiner)
 scripts/     generate_data.py  run_pipeline.py (local Hadoop Streaming simulator)  reference.py (independent check)
 tests/       test_streaming_jobs.py
-docs/        ARCHITECTURE.md  REVIEW.md  WORKSHEET.md
+docs/        ARCHITECTURE.md  REVIEW.md  WORKSHEET.md  SmartCampus_Completed_Worksheet.pdf  Remaining_Tasks_Guide.pdf
+screenshots/ 13 execution screenshots (PNG)
 outputs/     final CSVs, intermediate/ stage files, validation_report.json
 ```
 
@@ -130,10 +131,14 @@ hdfs dfs -cat /campus/out/job1/part-* | sort
 | **B. Verified on Hadoop** | **Hadoop 3.5.0, standalone mode (LocalJobRunner), OpenJDK 17, macOS, 11 Oct 2026.** `scripts/run_hadoop.sh` ran all nine stages, and all six final outputs are identical to the local outputs. Confirmed along the way: `-files` imports of `mr_common.py`, the combiner (Job 1: 5,000 → 112 records), the Job 6 KeyFieldBasedPartitioner options, the Job 5 distributed-cache `#global_stats.txt` file, and the SmartCampus rejection counters in Hadoop's counter report. Hadoop **does** append a trailing TAB to final CSV lines (F6). The script strips it when comparing. |
 | **C. Not yet verified** | A multi-node cluster or pseudo-distributed HDFS/YARN setup (standalone mode uses one JVM and the local filesystem), more than one reducer on real Hadoop, and the manual HDFS commands above. |
 
-## Screenshots (submission requirement)
-They can't be captured from this environment. To produce them, run these commands and screenshot
-the terminal: `python3 scripts/run_pipeline.py`, `python3 -m unittest discover -s tests -v`,
-`head outputs/job*.csv`, and the per-job commands above.
+## Submission material
+- `docs/SmartCampus_Completed_Worksheet.pdf`: answers to Q1-Q15, the expected output table, a result
+  interpretation for every job, the performance paragraph, answers to all viva questions, and the
+  execution screenshots. Fill in your name and roll number on page 1.
+- `screenshots/`: 13 real Terminal screenshots captured on 11 Oct 2026, covering data generation,
+  the mapper and reducer, the pipeline, the tests, each job's output, the Hadoop run, the Hadoop
+  part file and the Hadoop counters.
+- `docs/Remaining_Tasks_Guide.pdf`: guide for the remaining submission and viva steps.
 
 ## Known limitations
 - Synthetic data only. Results describe the generator's patterns, not a real campus.

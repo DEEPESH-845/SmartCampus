@@ -134,7 +134,7 @@ hdfs dfs -cat /campus/out/job1/part-* | sort
 ## Submission material
 - `docs/SmartCampus_Completed_Worksheet.pdf`: answers to Q1-Q15, the expected output table, a result
   interpretation for every job, the performance paragraph, answers to all viva questions, and the
-  execution screenshots. Fill in your name and roll number on page 1.
+  execution screenshots. Submitted by Deepesh Kakkar (roll no. 102315286), 11 October 2026.
 - `screenshots/`: 13 real Terminal screenshots captured on 11 Oct 2026, covering data generation,
   the mapper and reducer, the pipeline, the tests, each job's output, the Hadoop run, the Hadoop
   part file and the Hadoop counters.

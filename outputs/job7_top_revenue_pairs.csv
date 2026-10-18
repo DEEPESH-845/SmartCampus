@@ -1,0 +1,11 @@
+Rank,ItemA,ItemB,TransactionCount,EstPairRevenue
+1,Coffee,Sandwich,220,25300.00
+2,Samosa,Tea,242,8470.00
+3,"Masala ""Special"" Dosa",Veg Biryani,27,5670.00
+4,Sandwich,Veg Biryani,27,5400.00
+5,Cookies,Veg Biryani,36,5220.00
+6,Paneer Roll,Veg Biryani,27,5130.00
+7,Juice,Veg Biryani,25,4250.00
+8,Juice,"Masala ""Special"" Dosa",29,4060.00
+9,Paneer Roll,Sandwich,27,4050.00
+10,Ice Cream,"Masala ""Special"" Dosa",30,3900.00

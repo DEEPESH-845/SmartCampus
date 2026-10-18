@@ -5,10 +5,11 @@ MapReduce in Python on Hadoop Streaming.**
 
 | | |
 |---|---|
-| **Jobs** | 6 required MapReduce jobs + 1 extension job (9 MapReduce stages in total) |
+| **Jobs** | 6 required MapReduce jobs + 1 extension job (10 MapReduce stages in total) |
 | **Correctness** | 38 tests pass; every output row matches an independent reference implementation |
 | **Hadoop** | All 7 outputs identical on real Hadoop 3.5.0 (standalone mode) |
-| **Dependencies** | None. Python 3 standard library only; Hadoop is optional |
+| **Dependencies** | MapReduce code: Python 3 standard library only (Hadoop optional). Dashboard: Next.js via npm |
+| **Dashboard** | [smart-campus-pied-pi.vercel.app](https://smart-campus-pied-pi.vercel.app) |
 | **Data** | Synthetic and reproducible (seed 42), with deliberately malformed rows |
 
 Laboratory mini project for the *MapReduce Laboratory Worksheet: Smart Campus Analytics using Python
@@ -44,6 +45,7 @@ stage design, the real mapper and reducer source, and its full sortable output. 
 ```bash
 cd dashboard && npm ci && npm run dev        # http://localhost:3000
 npm run build                                # static export to dashboard/out/
+npm run lint && npm test                     # ESLint + CSV-reader test
 ```
 To deploy, import the repository into Vercel with **Root Directory `dashboard`** and the **Next.js**
 framework preset (Vercel picks both automatically). No `vercel.json` or environment variables are needed.
@@ -142,7 +144,8 @@ More detail: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 ---
 
 ## Running the project
-Requirements: Python 3.8+ (tested on 3.14.6). Hadoop is only needed for `run_hadoop.sh`.
+Requirements: Python 3.8+ (tested on 3.14.6). Hadoop is only needed for `run_hadoop.sh`, and
+Node.js 20.9+ only for the dashboard.
 
 ### Generate the data
 ```bash
@@ -193,8 +196,8 @@ ITEM_STATS=outputs/job3_canteen_items.csv python3 src/job7_revenue_pairs_mapper.
 python3 scripts/run_pipeline.py && scripts/run_hadoop.sh      # prints jobN MATCH / DIFFERS
 ```
 `run_hadoop.sh` finds the streaming jar, copies the code to a path without spaces (Hadoop paths are
-URIs), runs all nine stages and diffs every output against `outputs/`. Setup steps are in
-[`docs/Remaining_Tasks_Guide.pdf`](docs/Remaining_Tasks_Guide.pdf).
+URIs), runs all ten stages and diffs every output against `outputs/`. Setup steps are in
+[`docs/Hadoop_and_Viva_Guide.pdf`](docs/Hadoop_and_Viva_Guide.pdf).
 
 <details>
 <summary>Manual Hadoop / HDFS commands</summary>
@@ -327,5 +330,5 @@ reducers.
 | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Data flow, key/value contracts for every stage, combiner and partitioner design |
 | [docs/REVIEW.md](docs/REVIEW.md) | Independent review: findings F1–F12, mutation testing, unresolved risks |
 | [docs/SmartCampus_Completed_Worksheet.pdf](docs/SmartCampus_Completed_Worksheet.pdf) | The completed worksheet (18 Oct 2026): Q1–Q15, results for all 7 jobs, extension challenges, viva answers, 13 screenshots + the Job 7 Hadoop re-run |
-| [docs/Remaining_Tasks_Guide.pdf](docs/Remaining_Tasks_Guide.pdf) | Step-by-step Hadoop setup and run guide |
+| [docs/Hadoop_and_Viva_Guide.pdf](docs/Hadoop_and_Viva_Guide.pdf) | Hadoop setup and run steps, troubleshooting, viva preparation, command reference |
 | [screenshots/](screenshots/) | 13 terminal captures: data generation, mapper, reducer, pipeline, tests, each job's output, Hadoop run, part file, counters |

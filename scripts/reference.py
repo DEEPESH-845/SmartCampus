@@ -1,4 +1,4 @@
-"""Independent reference implementation of all six jobs (no MapReduce, no code from src/).
+"""Independent reference implementation of all seven jobs (no MapReduce, no code from src/).
 
 Used by the tests and the validation report to check the streaming outputs. It uses its own
 regex-based validation and exact Fraction arithmetic. It deliberately accepts only plain
@@ -88,12 +88,14 @@ def expected(data_dir):
     job5 = {s: v for s, v in students.items() if overall is not None and v[0] / v[1] > Fraction(3, 2) * overall}
     job6 = {k: [v[0] / v[1], v[1], v[0] / v[1] < 20]
             for k, v in totals(transport, lambda r: (r[2], r[1]), (3,)).items()}
+    unit = {k: (v[1] / v[0] if v[0] else 0) for k, v in job3.items()}
+    job7 = {k: n * (unit[k[0]] + unit[k[1]]) for k, n in job4.items()}
     return {
         "valid": {"wifi": len(wifi), "canteen": len(canteen), "library": len(library), "transport": len(transport)},
         "rejected": {"wifi": wifi_bad, "canteen": canteen_bad, "library": library_bad, "transport": transport_bad},
         "transactions": len(baskets),
         "job1": job1, "job2": job2, "job3": job3, "job4": dict(job4),
-        "job5_global": (g_total, g_visits, overall), "job5": job5, "job6": job6,
+        "job5_global": (g_total, g_visits, overall), "job5": job5, "job6": job6, "job7": job7,
     }
 
 
@@ -134,6 +136,8 @@ def compare(data_dir, out_dir):
     check("job6", _read(o / "job6_route_hour_speed.csv"), lambda r: (r["RouteID"], r["Hour"]), e["job6"],
           lambda r, x: _close(r["AverageSpeedKmph"], x[0]) and int(r["ObservationCount"]) == x[1]
           and (r["CongestionStatus"] == "CONGESTED") == x[2])
+    check("job7", _read(o / "job7_revenue_pairs.csv"), lambda r: (r["ItemA"], r["ItemB"]), e["job7"],
+          lambda r, x: _close(r["EstPairRevenue"], x))
     g = _read(o / "job5_overall.csv")[0]
     g_total, g_visits, overall = e["job5_global"]
     if not (_close(g["TotalDurationMin"], g_total) and int(g["Visits"]) == g_visits

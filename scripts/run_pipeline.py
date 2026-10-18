@@ -30,6 +30,7 @@ HEADERS = {
     "job4_pairs.csv": "ItemA,ItemB,TransactionCount",
     "job5_anomalies.csv": "StudentID,TotalDurationMin,Visits,AverageDurationMin,OverallAverageMin,ThresholdMin",
     "job6_route_hour_speed.csv": "RouteID,Hour,AverageSpeedKmph,ObservationCount,CongestionStatus",
+    "job7_revenue_pairs.csv": "ItemA,ItemB,TransactionCount,UnitPriceA,UnitPriceB,EstPairRevenue",
 }
 
 
@@ -57,7 +58,9 @@ def run_script(script, data, env=None):
 
 
 def run_stage(mapper, reducer, data, *, map_tasks=1, reducers=1, combiner=False, env=None):
-    """Simulate one Hadoop Streaming job on input bytes. Returns (output bytes, mapper counters)."""
+    """Simulate one Hadoop Streaming job on input bytes. Returns (output bytes, mapper counters).
+
+    reducer=None is a map-only job (Hadoop: -numReduceTasks 0): no shuffle, sort or reduce."""
     lines = data.splitlines(keepends=True)
     size = -(-len(lines) // map_tasks) or 1
     splits = [b"".join(lines[i:i + size]) for i in range(0, len(lines), size)] or [b""]
@@ -69,6 +72,8 @@ def run_stage(mapper, reducer, data, *, map_tasks=1, reducers=1, combiner=False,
         if combiner:
             out, _ = run_script(COMBINER, b"".join(sorted(out.splitlines(keepends=True))))
         shuffled += out.splitlines(keepends=True)
+    if reducer is None:
+        return b"".join(shuffled), counters
     parts = [[] for _ in range(reducers)]
     for line in shuffled:  # like KeyFieldBasedPartitioner -k1,1 with separator "|" (Job 6: RouteID)
         field = line.split(b"\t", 1)[0].split(b"|", 1)[0]
@@ -119,6 +124,11 @@ def run_all(data_dir, out_dir, map_tasks=1, reducers=1, combiner=False):
     out, counters["job6"] = run_stage("job6_transport_mapper.py", "job6_transport_reducer.py", raw["transport"], **comb)
     final("job6_route_hour_speed.csv", out)
 
+    # Job 7 (extension): chain Job 3 (side file) and Job 4 (input), map-only
+    out, _ = run_stage("job7_revenue_pairs_mapper.py", None, (out_dir / "job4_pairs.csv").read_bytes(),
+                       map_tasks=map_tasks, env={"ITEM_STATS": str(out_dir / "job3_canteen_items.csv")})
+    final("job7_revenue_pairs.csv", out)
+
     write_rankings(out_dir, glob)
     return counters, rows
 
@@ -146,6 +156,10 @@ def write_rankings(out_dir, global_line):
     top = sorted(pairs, key=lambda r: (-int(r["TransactionCount"]), r["ItemA"], r["ItemB"]))[:10]
     dump("job4_top_pairs.csv", ["Rank", "ItemA", "ItemB", "TransactionCount"],
          [[i + 1, r["ItemA"], r["ItemB"], r["TransactionCount"]] for i, r in enumerate(top)])
+    pairs = read_csv(out_dir / "job7_revenue_pairs.csv")
+    top = sorted(pairs, key=lambda r: (-float(r["EstPairRevenue"]), r["ItemA"], r["ItemB"]))[:10]
+    dump("job7_top_revenue_pairs.csv", ["Rank", "ItemA", "ItemB", "TransactionCount", "EstPairRevenue"],
+         [[i + 1, r["ItemA"], r["ItemB"], r["TransactionCount"], r["EstPairRevenue"]] for i, r in enumerate(top)])
     total, visits, avg = global_line.decode().strip().split("\t")[1].split(",")
     avg_txt = "UNDEFINED" if avg == "UNDEFINED" else f"{float(avg):.2f}"
     thr_txt = "UNDEFINED" if avg == "UNDEFINED" else f"{1.5 * float(avg):.2f}"
@@ -228,7 +242,7 @@ def main(argv=None):
         "invariants": checks,
         "reference_mismatches": {k: v[:20] for k, v in mismatches.items() if v},
         "known_limitations": [
-            "Executed with a local simulator; Hadoop cluster execution not verified.",
+            "Executed with a local simulator; Hadoop verified separately in standalone mode only (scripts/run_hadoop.sh).",
             "Records are line-oriented; CSV fields with embedded newlines are rejected.",
             "Congestion is an average-speed indicator only.",
         ],

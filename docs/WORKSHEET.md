@@ -85,6 +85,7 @@ associations (distinct students per AP per hour), using a two-stage distinct-cou
 | 4 Co-purchase | `(ItemA, ItemB)` | TransactionCount | 66 pairs; top (Samosa, Tea) 242, (Coffee, Sandwich) 220 |
 | 5 Library | `StudentID` (stage 1) / `GLOBAL` | total, visits / overall average | overall 62.38 min over 1,500 visits; threshold 93.57; 6 anomalous students |
 | 6 Transport | `RouteID, Hour` | AverageSpeed, count, status | 784 route-hours; 86 CONGESTED |
+| 7 Revenue pairs (extension) | `(ItemA, ItemB)` (map-only) | count, unit prices, EstPairRevenue | 66 pairs; top (Coffee, Sandwich) ₹25,300 vs (Samosa, Tea) ₹8,470 |
 
 ## Result interpretation (one per job)
 1. **Job 1:** Wi-Fi load concentrates in late morning and early afternoon. Summed across days,
@@ -106,6 +107,12 @@ associations (distinct students per AP per hour), using a two-stage distinct-cou
 6. **Job 6:** Congestion clusters in the rush hours 08–09 and 17–18, and on routes R03 and R02
    (37 and 35 congested route-hours). Average speed below 20 km/h is only an indicator. It does
    not separate traffic from scheduled stops.
+7. **Job 7 (extension, Job 3 + Job 4 chained):** Frequency and value rank pairs differently.
+   Samosa + Tea is the most frequent pair (242 transactions) but earns about ₹8,470 at average
+   prices. Coffee + Sandwich (220 transactions) earns about ₹25,300, roughly 3× more. Pairs with
+   Veg Biryani or Masala Dosa are rare (25–36 transactions) but fill places 3–8 on value. A
+   meal-deal discount on Coffee + Sandwich protects the most revenue, while one on Samosa + Tea
+   mainly drives footfall.
 
 ## Performance considerations
 The jobs are I/O- and shuffle-bound, not CPU-bound. Every map record is serialised, sorted and

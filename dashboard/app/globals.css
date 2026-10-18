@@ -6,28 +6,28 @@
 
 /* Colours follow the validated dataviz reference palette (light and dark stepped separately). */
 :root {
-  --background: #f9f9f7;
-  --foreground: #0b0b0b;
-  --card: #fcfcfb;
-  --card-foreground: #0b0b0b;
-  --popover: #0b0b0b;
-  --popover-foreground: #fcfcfb;
-  --primary: #0b0b0b;
-  --primary-foreground: #fcfcfb;
-  --secondary: #f0efec;
-  --secondary-foreground: #0b0b0b;
-  --muted: #f0efec;
-  --muted-foreground: #52514e;
-  --accent: #f0efec;
-  --accent-foreground: #0b0b0b;
+  --background: #f7f8f6;
+  --foreground: #1b1f24;
+  --card: #fbfcfa;
+  --card-foreground: #1b1f24;
+  --popover: #1b1f24;
+  --popover-foreground: #f7f8f6;
+  --primary: #1b1f24;
+  --primary-foreground: #f7f8f6;
+  --secondary: #eceee9;
+  --secondary-foreground: #1b1f24;
+  --muted: #eceee9;
+  --muted-foreground: #5b6168;
+  --accent: #eceee9;
+  --accent-foreground: #1b1f24;
   --destructive: #d03b3b;
-  --border: #e1e0d9;
-  --input: #e1e0d9;
+  --border: #e3e5e1;
+  --input: #e3e5e1;
   --ring: #2a78d6;
   --radius: 0.75rem;
 
-  --faint: #898781;   /* axis labels */
-  --axis: #c3c2b7;
+  --faint: #868c92;   /* axis labels */
+  --axis: #c4c8c2;
   --series-1: #2a78d6; /* blue */
   --series-2: #eb6834; /* orange */
   --deemph: #c9c8c0;
@@ -45,27 +45,27 @@
 }
 
 .dark {
-  --background: #0d0d0d;
-  --foreground: #f0efec;
-  --card: #1a1a19;
-  --card-foreground: #f0efec;
-  --popover: #f0efec;
-  --popover-foreground: #1a1a19;
-  --primary: #f0efec;
-  --primary-foreground: #1a1a19;
-  --secondary: #262624;
-  --secondary-foreground: #f0efec;
-  --muted: #262624;
-  --muted-foreground: #c3c2b7;
-  --accent: #262624;
-  --accent-foreground: #f0efec;
+  --background: #121416;
+  --foreground: #eceee9;
+  --card: #181b1e;
+  --card-foreground: #eceee9;
+  --popover: #eceee9;
+  --popover-foreground: #181b1e;
+  --primary: #eceee9;
+  --primary-foreground: #181b1e;
+  --secondary: #202428;
+  --secondary-foreground: #eceee9;
+  --muted: #202428;
+  --muted-foreground: #b3b8b1;
+  --accent: #202428;
+  --accent-foreground: #eceee9;
   --destructive: #e05a5a;
-  --border: #2c2c2a;
-  --input: #383835;
+  --border: #2a2e33;
+  --input: #363b40;
   --ring: #3987e5;
 
-  --faint: #898781;
-  --axis: #383835;
+  --faint: #868c92;
+  --axis: #3a3f44;
   --series-1: #3987e5;
   --series-2: #d95926;
   --deemph: #4a4a46;
@@ -79,8 +79,8 @@
 }
 
 @theme inline {
-  --font-sans: system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-heading: var(--font-sans);
+  --font-sans: var(--font-body), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-heading: var(--font-display), var(--font-sans);
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -133,3 +133,4 @@
 }
 
 .tabular { font-variant-numeric: tabular-nums; }
+.display { font-family: var(--font-display), var(--font-body), system-ui, sans-serif; font-optical-sizing: auto; letter-spacing: -0.02em; }

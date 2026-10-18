@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { DataTable } from "@/components/interactive";
-import { Checks, Code, Section, Tile } from "@/components/visuals";
+import { CircleCheck } from "lucide-react";
+import { Section } from "@/components/visuals";
 import { getData } from "@/lib/data";
-import { nf, pairName, rupee } from "@/lib/format";
+import { day, hourLabel, nf, pairName, rupee } from "@/lib/format";
 import { insights } from "@/lib/insights";
 import { JOBS } from "@/lib/jobs";
 
@@ -12,103 +11,130 @@ export default function Overview() {
   const x = insights(d);
   const passed = d.invariants.filter((c) => c.passed).length;
   const tests = d.tests.match(/Ran (\d+) tests/)?.[1];
-  const rejected = d.quality.reduce((s, q) => s + q.rejected, 0);
   const sample = d.hours.find((h) => h.hour === "2026-08-10-09")!;
+  const peak = x.peak[0];
 
-  const flow = [
-    ["1 · Input line", "S101,2026-08-10 09:15,AP03,120,35", "A raw Wi-Fi log row (the worksheet's example)."],
-    ["2 · Map", "2026-08-10-09 ⇥ 120,35,1", "Key = the hour. Value = data, minutes and a count of 1."],
-    ["3 · Shuffle & sort", `2026-08-10-09 ⇥ …\n(${sample.sessions} lines, adjacent)`, "Hadoop sorts by key, so every session of that hour arrives together."],
-    ["4 · Reduce", `2026-08-10-09,${sample.dataMB.toFixed(2)},${sample.durationMin.toFixed(2)},${sample.sessions}`, `Sums per key: ${nf(sample.dataMB, 1)} MB, ${nf(sample.durationMin)} min, ${sample.sessions} sessions.`],
+  const findings = [
+    { job: 1, figure: hourLabel(peak.hour.slice(11)), note: day(peak.hour.slice(0, 10)),
+      text: `Wi-Fi peaks: ${nf(peak.dataMB)} MB moved in a single hour.` },
+    { job: 3, figure: x.byRevenue[0].item, note: rupee(x.byRevenue[0].revenue),
+      text: `earns the most, although ${x.byQuantity[0].item} sells the most units.` },
+    { job: 7, figure: `${nf(x.pairsByRevenue[0].revenue / x.pairsByCount[0].revenue, 1)}×`, note: pairName(x.pairsByRevenue[0]),
+      text: `the revenue of ${pairName(x.pairsByCount[0])}, the pair bought most often.` },
+    { job: 5, figure: `${x.flagged.length} of ${d.library.students.length}`, note: "students",
+      text: `stay more than 1.5× the average library visit of ${nf(d.library.average)} minutes.` },
+    { job: 6, figure: nf(x.congested.length), note: "route-hours",
+      text: `had buses below 20 km/h, mostly at ${x.worstHours.slice(0, 2).map(hourLabel).join(" and ")} and on ${x.worstRoutes.map(([r]) => r).join(" and ")}.` },
+  ];
+
+  const steps = [
+    ["Read a line", "S101,2026-08-10 09:15,AP03,120,35"],
+    ["Map to key and value", "2026-08-10-09  120,35,1"],
+    ["Sort, so the hour's lines meet", `${sample.sessions} lines with key 2026-08-10-09`],
+    ["Reduce to one total", `${nf(sample.dataMB, 1)} MB in ${sample.sessions} sessions`],
   ];
 
   return (
-    <div className="space-y-5">
-      <header className="pb-2">
-        <p className="mb-1.5 text-xs font-medium tracking-wide text-faint uppercase">MapReduce laboratory mini project · Python Hadoop Streaming</p>
-        <h1 className="mb-3 text-[clamp(28px,5vw,42px)] leading-tight font-semibold tracking-tight">Smart Campus Analytics</h1>
-        <p className="max-w-3xl text-[16px] text-muted-foreground">
-          Seven MapReduce jobs turn one week of campus Wi-Fi, canteen, library and transport logs into operational answers:
-          when the network peaks, what sells, who lingers, and where buses crawl. The data is synthetic (seed 42), so the
-          numbers describe the generator&apos;s patterns, not a real campus.
+    <div className="space-y-24">
+      <header className="max-w-4xl">
+        <h1 className="display text-[clamp(40px,7vw,76px)] leading-[1.02] font-semibold">
+          What one week of campus logs says
+        </h1>
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          Seven MapReduce jobs, written as Python scripts for Hadoop Streaming, read Wi-Fi, canteen, library and
+          bus logs. The data is synthetic, so the answers describe its generator, not a real campus.
         </p>
-        <div className="mt-5">
-          <Checks items={[
-            "7 of 7 outputs identical on real Hadoop 3.5.0",
-            ...(tests ? [`${tests} automated tests pass`] : []),
-            `${passed} of ${d.invariants.length} validation checks pass`,
-            `${rejected} malformed rows rejected and counted`,
-          ]} />
-        </div>
-        <div className="mt-6 grid grid-cols-[repeat(auto-fit,minmax(180px,1fr))] gap-3">
-          <Tile href="/jobs/1/" label="Peak Wi-Fi hour" value={x.when(x.peak[0].hour)} sub={x.stat[1]} />
-          <Tile href="/jobs/3/" label="Top revenue item" value={x.byRevenue[0].item} sub={`${rupee(x.byRevenue[0].revenue)} · ${x.byQuantity[0].item} sells the most units`} />
-          <Tile href="/jobs/7/" label="Most valuable pair" value={pairName(x.pairsByRevenue[0])} sub={x.stat[7]} />
-          <Tile href="/jobs/5/" label="Library anomalies" value={`${x.flagged.length} of ${d.library.students.length}`} sub={`students average over ${nf(d.library.threshold, 1)} min`} />
-          <Tile href="/jobs/6/" label="Congested route-hours" value={`${x.congested.length} of ${d.routeHours.length}`} sub="average speed below 20 km/h" />
-        </div>
+        <p className="mt-6 flex items-start gap-2 text-[14px] text-muted-foreground">
+          <CircleCheck className="mt-0.5 size-4 shrink-0 text-good" aria-hidden="true" />
+          <span>All 7 outputs identical on real Hadoop 3.5.0. {tests ? `${tests} tests` : "Tests"} and {passed} of {d.invariants.length} validation checks pass.</span>
+        </p>
       </header>
 
-      <Section eyebrow="How it works" title="Every job is a mapper, a sort and a reducer">
-        <p className="mb-4 max-w-3xl text-muted-foreground">
-          Each job is a pair of small Python scripts that read lines on stdin and print lines on stdout. Hadoop splits the
-          input, runs mappers in parallel, sorts their output by key so equal keys sit together, and gives each key&apos;s
-          group to one reducer. Here is one Wi-Fi record travelling through Job 1:
-        </p>
-        <ol className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-4">
-          {flow.map(([t, c, p]) => (
-            <li key={t} className="rounded-xl border bg-background p-3">
-              <div className="mb-1.5 text-[13px] font-semibold">{t}</div>
-              <code className="block font-mono text-[11.5px] break-all whitespace-pre-wrap">{c}</code>
-              <p className="mt-1.5 text-[12.5px] text-muted-foreground">{p}</p>
+      <section aria-label="Key findings">
+        <ul>
+          {findings.map((f) => (
+            <li key={f.job} className="border-t last:border-b">
+              <Link href={`/jobs/${f.job}/`} className="group grid gap-x-10 gap-y-1 py-7 sm:grid-cols-[minmax(0,15rem)_1fr_auto] sm:items-baseline sm:py-8">
+                <div>
+                  <div className="display text-[clamp(30px,4.5vw,44px)] leading-none font-semibold group-hover:text-series-1">{f.figure}</div>
+                  <div className="mt-2 text-[13px] text-faint">{f.note}</div>
+                </div>
+                <p className="max-w-xl text-[17px] leading-relaxed text-muted-foreground">{f.text}</p>
+                <span className="text-[13px] text-faint group-hover:text-foreground">Job {f.job}</span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <Section id="how" title="How one job runs"
+        intro="Hadoop splits the input, runs the mapper on every part in parallel, sorts the output so equal keys meet, and hands each key to one reducer. One Wi-Fi record through Job 1:">
+        <ol className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+          {steps.map(([t, c], i) => (
+            <li key={t}>
+              <div className="display text-[40px] leading-none font-semibold text-series-1">{i + 1}</div>
+              <div className="mt-4 font-medium">{t}</div>
+              <code className="mt-2 block font-mono text-[12.5px] break-all text-muted-foreground">{c}</code>
             </li>
           ))}
         </ol>
       </Section>
 
-      <section aria-labelledby="jobs-h">
-        <h2 id="jobs-h" className="mt-8 mb-3 text-xl font-semibold">The seven jobs</h2>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <Section id="jobs" title="The seven jobs">
+        <ul>
           {JOBS.map((j) => (
-            <Link key={j.id} href={`/jobs/${j.id}/`} className="group flex flex-col rounded-2xl border bg-card p-5 transition-colors hover:border-axis">
-              <div className="mb-2 flex items-center justify-between text-xs text-faint">
-                <span className="font-medium tracking-wide uppercase">Job {j.id} · {j.short}{j.id === 7 ? " (extension)" : ""}</span>
-                <span className="tabular">{j.stages.length} stage{j.stages.length > 1 ? "s" : ""}</span>
-              </div>
-              <div className="text-[13px] text-muted-foreground">{j.question}</div>
-              <div className="mt-1 text-[17px] leading-snug font-semibold">{x.headline[j.id]}</div>
-              <div className="mt-1 text-[13px] text-faint">{x.stat[j.id]}</div>
-              <div className="mt-auto pt-3 font-mono text-[11.5px] text-muted-foreground">{j.stages[0].key} → {j.stages[0].value}</div>
-              <span className="mt-3 inline-flex items-center gap-1 text-[13px] font-medium text-series-1">
-                Open job <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-0.5" />
-              </span>
-            </Link>
+            <li key={j.id} className="border-t last:border-b">
+              <Link href={`/jobs/${j.id}/`} className="group grid grid-cols-[2rem_1fr_auto] items-baseline gap-x-4 py-4">
+                <span className="tabular text-faint">{j.id}</span>
+                <span>
+                  <span className="font-medium group-hover:text-series-1">{j.question}</span>
+                  <span className="mt-0.5 block text-[14px] text-muted-foreground">{x.headline[j.id]}</span>
+                </span>
+                <span className="flex gap-1" aria-label={`${j.stages.length} MapReduce stage${j.stages.length > 1 ? "s" : ""}`} title={`${j.stages.length} stage${j.stages.length > 1 ? "s" : ""}`}>
+                  {j.stages.map((s) => <i key={s.name} className="size-2 rounded-full bg-series-1" />)}
+                </span>
+              </Link>
+            </li>
           ))}
-        </div>
-      </section>
+        </ul>
+        <p className="mt-4 text-[13px] text-faint">Dots show the number of MapReduce stages in each job.</p>
+      </Section>
 
-      <Section id="quality" eyebrow="Data quality and verification" title="Bad rows are counted, not fatal, and every result is cross-checked">
-        <p className="mb-4 max-w-3xl text-muted-foreground">
-          Each dataset contains five deliberately malformed rows. Mappers reject them by reason and report the counts through
-          Hadoop counters, so nothing disappears silently. After every run, {d.invariants.length} checks compare totals across
-          jobs and match every output row against an independent implementation that uses no MapReduce. The same outputs were
-          reproduced on real Hadoop 3.5.0.
-        </p>
-        <DataTable maxHeight="none" caption="Records per dataset"
-          columns={[{ label: "Dataset" }, { label: "Records", numeric: true }, { label: "Valid", numeric: true }, { label: "Rejected", numeric: true }, { label: "Rejected because" }]}
-          rows={d.quality.map((q) => ({
-            cells: [q.dataset, nf(q.records), nf(q.valid), nf(q.rejected), Object.entries(q.reasons).map(([k, v]) => `${k.replaceAll("_", " ")} ×${v}`).join(" · ")],
-            sort: [q.dataset, q.records, q.valid, q.rejected, ""],
-          }))} />
-        <details className="mt-4">
-          <summary className="w-fit cursor-pointer text-[13px] text-muted-foreground hover:text-foreground">View all {d.invariants.length} checks ({passed} passed)</summary>
-          <ul className="mt-2 grid gap-1 text-[13px] sm:grid-cols-2">
+      <Section id="quality" title="Bad rows are counted, not fatal"
+        intro="Each dataset hides five malformed rows. The mappers reject them and report the reason through Hadoop counters, and every output row is checked against an independent implementation.">
+        <table className="w-full max-w-2xl text-[15px]">
+          <thead>
+            <tr className="text-left text-[13px] text-faint">
+              <th className="pb-3 font-normal">Dataset</th>
+              <th className="pb-3 text-right font-normal">Rows</th>
+              <th className="pb-3 text-right font-normal">Valid</th>
+              <th className="pb-3 text-right font-normal">Rejected</th>
+            </tr>
+          </thead>
+          <tbody className="tabular">
+            {d.quality.map((q) => (
+              <tr key={q.dataset} className="border-t">
+                <td className="py-3">{q.dataset}</td>
+                <td className="py-3 text-right">{nf(q.records)}</td>
+                <td className="py-3 text-right">{nf(q.valid)}</td>
+                <td className="py-3 text-right">
+                  <span className="cursor-help underline decoration-dotted underline-offset-4"
+                    data-tip={Object.entries(q.reasons).map(([k, v]) => `${k.replaceAll("_", " ")} (${v})`).join("\n")}>{q.rejected}</span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <details className="mt-8 max-w-3xl">
+          <summary className="w-fit cursor-pointer text-[14px] text-muted-foreground hover:text-foreground">Show all {d.invariants.length} validation checks</summary>
+          <ul className="mt-4 grid gap-2 text-[14px] sm:grid-cols-2">
             {d.invariants.map((c) => (
-              <li key={c.check} className="flex gap-2"><span className={c.passed ? "text-good" : "text-critical"}>{c.passed ? "✓" : "✗"}</span>{c.check}</li>
+              <li key={c.check} className="flex gap-2 text-muted-foreground">
+                <span className={c.passed ? "text-good" : "text-critical"}>{c.passed ? "✓" : "✗"}</span>{c.check}
+              </li>
             ))}
           </ul>
         </details>
-        <p className="mt-4 text-[13px] text-faint">Run <Code>python3 scripts/run_pipeline.py --run-tests</Code> to regenerate everything this site reads.</p>
       </Section>
     </div>
   );

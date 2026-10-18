@@ -50,7 +50,8 @@ they can be counted across transactions, which needs two different groupings. Jo
 needs the global average, which only exists after every record has been seen, so it needs a
 per-student, a global and a filter stage. Jobs 1, 2, 3 and 6 are single-grouping aggregations. In
 this implementation the Job 1 peak is a ranking of the finished hourly output, and could be a
-second single-key stage on a cluster.
+second single-key stage on a cluster. The extension Job 7 is a third kind of chaining: a map-only
+job that consumes the outputs of Jobs 3 and 4.
 
 **Q11. A reducer receives millions of values for one key?** It still works: our reducers stream
 values with O(1) memory. But that one reducer becomes the straggler that limits job completion,
@@ -124,10 +125,24 @@ stragglers. Job 4's pair generation is quadratic in basket size, so basket size,
 drives its cost. The multi-stage jobs pay extra job start-up and intermediate HDFS writes, so
 stages should be added only when a different grouping is genuinely required, as in Jobs 4 and 5.
 
+## Extension challenges (worksheet §12)
+All eight are implemented.
+
+| Challenge | Implementation and evidence |
+|-----------|-----------------------------|
+| Combiner for the Wi-Fi job | `src/sum_combiner.py`, an element-wise sum safe for every additive job. On Hadoop it reduced Job 1's 5,000 map records to 112. |
+| Top three hours | `outputs/job1_peak_hours.csv`: 2026-08-10 14:00, 2026-08-13 11:00, 2026-08-11 15:00. |
+| Custom partitioner for transport | KeyFieldBasedPartitioner on RouteID (Q13), verified on Hadoop 3.5.0. |
+| Structured serialization | Job 4 uses JSON pair keys such as `["Coffee", "Sandwich"]`, so item names with commas or quotes stay unambiguous. |
+| Chain Job 3 and Job 4: high-revenue pairs | **Job 7**: a map-only job (`-reducer NONE`). Its input is the Job 4 output; the Job 3 output reaches every mapper as a distributed-cache side file. Score = TransactionCount × (UnitPriceA + UnitPriceB), with UnitPrice = TotalRevenue / TotalQuantity. Top: (Coffee, Sandwich) ₹25,300, (Samosa, Tea) ₹8,470. |
+| Count rejected malformed records | 5 malformed rows per dataset (20 in total), rejected by reason and reported as Hadoop counters; records = valid + rejected is checked. |
+| With and without a Combiner | Identical outputs. Shuffle records fell from 5,000 to 112 on Hadoop (Job 1), and from 249,981 to 119 per map task in a 1,000,000-row local benchmark. |
+| Multiple reducers | Identical outputs with 1, 3 and 4 reducers in the local simulator (Hadoop was run with one reducer). |
+
 ## Viva quick answers
 Three phases: map, shuffle/sort, reduce. Hadoop sorts mapper output so equal keys arrive adjacent
 and one streaming pass can aggregate them. Zero reducers is allowed: a map-only job writes mapper
-output directly. With multiple reducers each one owns a key partition and output is split across
+output directly, as Job 7 does. With multiple reducers each one owns a key partition and output is split across
 `part-*` files. Results stay correct because a key never spans reducers, which we verified with 3
 and 4 reducers. Data locality means scheduling map tasks on the nodes that hold the input blocks.
 Duplicate records: deduplicate with a key on the record's identity. For Job 4, items are already

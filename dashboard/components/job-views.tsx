@@ -1,11 +1,11 @@
 import type { Data } from "@/lib/data";
 import { compact, day, hourLabel, nf, pairName, rupee } from "@/lib/format";
 import { insights } from "@/lib/insights";
-import { DataTable, type Column, type Row } from "@/components/interactive";
+import type { Column, Row } from "@/components/interactive";
 import { LibraryStrip, PairsScatter } from "@/components/recharts";
 import { BarList, Heatmap, Legend, Takeaway, type Bar, type HeatCell } from "@/components/visuals";
 
-const H3 = ({ children }: { children: React.ReactNode }) => <h3 className="mt-6 mb-2 text-sm font-semibold text-muted-foreground">{children}</h3>;
+const H3 = ({ children }: { children: React.ReactNode }) => <h3 className="mb-4 text-[14px] font-medium text-muted-foreground">{children}</h3>;
 const niceMax = (v: number) => { const m = 10 ** Math.floor(Math.log10(v)); return Math.ceil(v / m) * m; };
 const uniq = (xs: string[]) => [...new Set(xs)].sort();
 
@@ -28,7 +28,7 @@ function WifiHeatmap({ d }: { d: Data }) {
       <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-faint">
         <span>0 MB</span>
         <span className="h-2 w-40 rounded-[2px]" style={{ background: `linear-gradient(90deg, ${Array.from({ length: 13 }, (_, i) => `var(--seq-${i})`).join(",")})` }} />
-        <span>{nf(max)} MB</span><span>· outlined: peak hour</span>
+        <span>{nf(max)} MB</span><span className="ml-3">Outlined: peak hour</span>
       </div>
     </>
   );
@@ -68,7 +68,7 @@ export function JobResult({ id, d }: { id: number; d: Data }) {
     case 1:
       return (
         <>
-          <p className="mb-4 text-muted-foreground">Total data downloaded in each hour of the week. Darker means more data.</p>
+          <p className="mb-8 max-w-2xl text-[15px] text-muted-foreground">Total data downloaded in each hour of the week. Darker means more data.</p>
           <WifiHeatmap d={d} />
           <Takeaway>Top three hours: {x.peak.map((h) => `${x.when(h.hour)} (${nf(h.dataMB)} MB)`).join("; ")}. Demand concentrates in late morning and early afternoon, so capacity should be planned for these peaks, not the daily average.</Takeaway>
         </>
@@ -79,7 +79,7 @@ export function JobResult({ id, d }: { id: number; d: Data }) {
         tip: `${a.ap}\n${nf(a.dataMB, 1)} MB · ${a.sessions} sessions\nAverage session ${nf(a.avgMin, 1)} min` }));
       return (
         <>
-          <p className="mb-4 text-muted-foreground">Total data per access point for the week. Hover a bar for sessions and average session length.</p>
+          <p className="mb-8 max-w-2xl text-[15px] text-muted-foreground">Total data per access point for the week. Hover a bar for sessions and average session length.</p>
           <BarList bars={bars} max={niceMax(bars[0].value)} />
           <Takeaway>Every access point handled {x.stat[2]}. No hotspot stands out in this synthetic data, because the generator assigns access points uniformly; with real logs the same job would reveal overloaded rooms.</Takeaway>
         </>
@@ -91,9 +91,9 @@ export function JobResult({ id, d }: { id: number; d: Data }) {
       const rev: Bar[] = x.byRevenue.map((i) => ({ name: i.item, value: i.revenue, label: compact(i.revenue), tip: itemTip(i), tone: tone(i.item) }));
       return (
         <>
-          <p className="mb-4 text-muted-foreground">The same twelve items ranked two ways. Volume and value tell different stories.</p>
+          <p className="mb-8 max-w-2xl text-[15px] text-muted-foreground">The same twelve items ranked two ways. Volume and value tell different stories.</p>
           <Legend items={[{ label: x.byRevenue[0].item, color: "var(--series-1)" }, { label: x.byQuantity[0].item, color: "var(--series-2)" }, { label: "Other items", color: "var(--deemph)" }]} />
-          <div className="grid gap-6 md:grid-cols-2 [&>*]:min-w-0">
+          <div className="grid gap-10 md:grid-cols-2 md:gap-16 [&>*]:min-w-0">
             <div><H3>Units sold</H3><BarList bars={units} max={niceMax(units[0].value)} /></div>
             <div><H3>Revenue (₹)</H3><BarList bars={rev} max={niceMax(rev[0].value)} /></div>
           </div>
@@ -107,7 +107,7 @@ export function JobResult({ id, d }: { id: number; d: Data }) {
         tip: `${pairName(p)}\nBought together in ${p.count} transactions` }));
       return (
         <>
-          <p className="mb-4 text-muted-foreground">The ten pairs of different items most often bought in the same transaction.</p>
+          <p className="mb-8 max-w-2xl text-[15px] text-muted-foreground">The ten pairs of different items most often bought in the same transaction.</p>
           <BarList bars={bars} max={niceMax(bars[0].value)} />
           <Takeaway>Two combos dominate: {pairName(x.pairsByCount[0])} ({x.pairsByCount[0].count} transactions) and {pairName(x.pairsByCount[1])} ({x.pairsByCount[1].count}). No other pair appears in more than {x.pairsByCount[2].count}. These are the natural meal-deal candidates; Job 7 shows which one is worth more.</Takeaway>
         </>
@@ -118,7 +118,7 @@ export function JobResult({ id, d }: { id: number; d: Data }) {
       const single = x.flagged.find((s) => s.visits === 1);
       return (
         <>
-          <p className="mb-4 text-muted-foreground">Each mark is one student&apos;s average visit length. Students right of the threshold (1.5 × the overall average) are flagged.</p>
+          <p className="mb-8 max-w-2xl text-[15px] text-muted-foreground">Each mark is one student&apos;s average visit length. Students right of the threshold (1.5 × the overall average) are flagged.</p>
           <Legend items={[{ label: "Within normal range", color: "var(--series-1)", shape: "dot" }, { label: "Flagged (above threshold)", color: "var(--critical)", shape: "triangle" },
             { label: `Overall average ${nf(d.library.average, 1)} min`, color: "var(--faint)", shape: "line" },
             { label: `Threshold ${nf(d.library.threshold, 1)} min`, color: "var(--foreground)", shape: "line" }]} />
@@ -130,7 +130,7 @@ export function JobResult({ id, d }: { id: number; d: Data }) {
     case 6:
       return (
         <>
-          <p className="mb-4 text-muted-foreground">For each route and hour of the day: on how many days of the week was the average speed below 20 km/h?</p>
+          <p className="mb-8 max-w-2xl text-[15px] text-muted-foreground">For each route and hour of the day: on how many days of the week was the average speed below 20 km/h?</p>
           <CongestionHeatmap d={d} />
           <Takeaway>{x.congested.length} of {d.routeHours.length} route-hours were congested. The worst routes are {x.worstRoutes.map(([r, n]) => `${r} (${n})`).join(" and ")}; the worst hours are {x.worstHours.map(hourLabel).join(", ")}. Below 20 km/h is an indicator only: it cannot tell traffic from scheduled stops.</Takeaway>
         </>
@@ -139,19 +139,12 @@ export function JobResult({ id, d }: { id: number; d: Data }) {
       const hi = new Set([x.pairsByCount[0], x.pairsByRevenue[0]]);
       const points = d.pairs.map((p) => ({ name: pairName(p), count: p.count, revenue: p.revenue, highlight: hi.has(p),
         rankCount: x.pairsByCount.indexOf(p) + 1, rankRevenue: x.pairsByRevenue.indexOf(p) + 1 }));
-      const rank = (list: Data["pairs"]): Row[] => list.slice(0, 5).map((p, i) => ({
-        cells: [String(i + 1), pairName(p), nf(p.count), rupee(p.revenue)], sort: [i + 1, pairName(p), p.count, p.revenue] }));
-      const cols: Column[] = [{ label: "#", numeric: true }, { label: "Pair" }, { label: "Txns", numeric: true }, { label: "Revenue", numeric: true }];
       const [f, v] = [x.pairsByCount[0], x.pairsByRevenue[0]];
       return (
         <>
-          <p className="mb-4 text-muted-foreground">Each dot is one pair: how often it is bought (Job 4) against the revenue it brings at average prices (Job 7).</p>
+          <p className="mb-8 max-w-2xl text-[15px] text-muted-foreground">Each dot is one pair: how often it is bought (Job 4) against the revenue it brings at average prices (Job 7).</p>
           <Legend items={[{ label: "Highlighted pair", color: "var(--series-1)", shape: "dot" }, { label: "Other pairs", color: "var(--deemph)", shape: "dot" }]} />
           <PairsScatter points={points} />
-          <div className="mt-2 grid gap-6 md:grid-cols-2 [&>*]:min-w-0">
-            <div><H3>Top 5 by frequency (Job 4)</H3><DataTable columns={cols} rows={rank(x.pairsByCount)} maxHeight="none" /></div>
-            <div><H3>Top 5 by estimated revenue (Job 7)</H3><DataTable columns={cols} rows={rank(x.pairsByRevenue)} maxHeight="none" /></div>
-          </div>
           <Takeaway>{pairName(f)} appears in the most baskets ({f.count}), but {pairName(v)} earns about {nf(v.revenue / f.revenue, 1)}× as much ({rupee(v.revenue)} vs {rupee(f.revenue)}). A meal deal on {pairName(v)} protects the most revenue; one on {pairName(f)} mainly drives footfall. Revenue is estimated as transactions × (unit price A + unit price B).</Takeaway>
         </>
       );

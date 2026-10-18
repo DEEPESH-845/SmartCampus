@@ -37,6 +37,17 @@ scripts/run_hadoop.sh                            # optional: rerun everything on
 Results land in [`outputs/`](outputs/). The datasets are already in [`data/`](data/). To regenerate
 them, run `python3 scripts/generate_data.py`.
 
+**Results dashboard.** [`dashboard/`](dashboard/) is a Next.js 16 site (TypeScript, Tailwind CSS 4,
+shadcn/ui, Recharts) with an overview page and one page per job. Each job page shows the job's chart,
+stage design, the real mapper and reducer source, and its full sortable output. At build time it reads
+`outputs/` and `src/` directly, and the export is plain static HTML with no server.
+```bash
+cd dashboard && npm ci && npm run dev        # http://localhost:3000
+npm run build                                # static export to dashboard/out/
+```
+To deploy, import the repository into Vercel and leave the root directory as `/`. The root
+[`vercel.json`](vercel.json) installs, builds and serves `dashboard/out`.
+
 ---
 
 ## The problem
@@ -263,6 +274,7 @@ reducers.
 │   ├── run_pipeline.py          local Hadoop Streaming simulator + validation report
 │   ├── reference.py             independent non-MapReduce implementation
 │   └── run_hadoop.sh            run on real Hadoop and diff against outputs/
+├── dashboard/                   Next.js results dashboard (reads outputs/ and src/ at build time)
 ├── tests/test_streaming_jobs.py
 ├── outputs/                     final CSVs, intermediate/ stage files, validation_report.json
 ├── docs/                        architecture, review, worksheet answers, PDFs
@@ -314,6 +326,6 @@ reducers.
 | [docs/WORKSHEET.md](docs/WORKSHEET.md) | Answers to Q1–Q15, the expected output table, an interpretation per job, the performance paragraph, viva answers |
 | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Data flow, key/value contracts for every stage, combiner and partitioner design |
 | [docs/REVIEW.md](docs/REVIEW.md) | Independent review: findings F1–F12, mutation testing, unresolved risks |
-| [docs/SmartCampus_Completed_Worksheet.pdf](docs/SmartCampus_Completed_Worksheet.pdf) | The submitted worksheet, with screenshots (11 Oct 2026, Jobs 1–6) |
+| [docs/SmartCampus_Completed_Worksheet.pdf](docs/SmartCampus_Completed_Worksheet.pdf) | The completed worksheet (18 Oct 2026): Q1–Q15, results for all 7 jobs, extension challenges, viva answers, 13 screenshots + the Job 7 Hadoop re-run |
 | [docs/Remaining_Tasks_Guide.pdf](docs/Remaining_Tasks_Guide.pdf) | Step-by-step Hadoop setup and run guide |
 | [screenshots/](screenshots/) | 13 terminal captures: data generation, mapper, reducer, pipeline, tests, each job's output, Hadoop run, part file, counters |

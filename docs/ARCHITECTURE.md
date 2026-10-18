@@ -13,6 +13,7 @@ data/*.csv ──► mapper ──► [combiner] ──► partition(first key f
 | 4 Co-purchase | 2: pairs per transaction → pair counts | canteen.csv |
 | 5 Library anomaly | 3: per student → global → filter | library.csv |
 | 6 Transport | 1 | transport.csv |
+| 7 Revenue pairs (extension) | 1, map-only (zero reducers) | Job 4 output + Job 3 output as a side file |
 
 ## Key/value contracts
 The grouping key is **everything before the last TAB**, and the value is everything after it.
@@ -32,6 +33,7 @@ unambiguous.
 | J5 global reduce | `GLOBAL` | `TotalDuration,Visits,Average\|UNDEFINED` |
 | J5 filter map | `S101` | `Total,Visits,GlobalTotal,GlobalVisits` (anomalies only) |
 | J6 map | `R04\|2026-08-10-08` (composite, one field) | `SpeedKmph,1` |
+| J7 map (final, no reduce) | CSV `ItemA,ItemB,Count,UnitPriceA,UnitPriceB,EstPairRevenue` | (map-only) |
 
 The value always carries a count (`,1`) so that averages are computed from **sum and count**.
 That makes `src/sum_combiner.py`, an element-wise sum that emits the same format it reads, safe

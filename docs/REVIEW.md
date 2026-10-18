@@ -24,7 +24,9 @@ and the tests were checked by mutation. Severity: Critical / High / Medium / Low
 ## Areas checked with no defect found
 - **A Spec compliance:** all 6 jobs, the required multi-stage designs for J4 and J5, and the
   extension challenges (combiner, top-3 hours, partitioner, JSON serialization in J4, malformed
-  record counting, combiner comparison, multiple reducers) are implemented.
+  record counting, combiner comparison, multiple reducers, and the Job 3 + Job 4 chain as Job 7) are
+  implemented. Job 7 was added on 18 Oct 2026 after a re-read showed that the chain challenge was
+  the only one missing.
 - **D CSV safety:** quoted commas and escaped quotes are tested end to end (J3, J4). An
   unbalanced quote rejects only its own line.
 - **F Numeric:** `Decimal` throughout. 0.1 + 0.2 = 0.30 is tested. Thresholds are compared

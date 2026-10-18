@@ -98,7 +98,8 @@
     "job3_canteen_items.csv": 12,
     "job4_pairs.csv": 66,
     "job5_anomalies.csv": 6,
-    "job6_route_hour_speed.csv": 784
+    "job6_route_hour_speed.csv": 784,
+    "job7_revenue_pairs.csv": 66
   },
   "invariants": [
     {
@@ -184,18 +185,22 @@
     {
       "check": "job6 every output row matches independent reference",
       "passed": true
+    },
+    {
+      "check": "job7 every output row matches independent reference",
+      "passed": true
     }
   ],
   "reference_mismatches": {},
   "known_limitations": [
-    "Executed with a local simulator; Hadoop cluster execution not verified.",
+    "Executed with a local simulator; Hadoop verified separately in standalone mode only (scripts/run_hadoop.sh).",
     "Records are line-oriented; CSV fields with embedded newlines are rejected.",
     "Congestion is an average-speed indicator only."
   ],
   "tests": {
     "exit_code": 0,
     "summary": [
-      "Ran 36 tests in 4.967s",
+      "Ran 38 tests in 10.368s",
       "OK"
     ]
   }

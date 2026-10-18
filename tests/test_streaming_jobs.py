@@ -93,6 +93,7 @@ class Job1PeakWifi(unittest.TestCase):
                 "Hour,TotalDataMB,TotalDurationMin,Sessions\n2026-08-10-09,5.00,1.00,1\n"
                 "2026-08-10-11,50.00,1.00,1\n2026-08-10-10,50.00,9.00,9\n")
             (d / "job4_pairs.csv").write_text("ItemA,ItemB,TransactionCount\n")
+            (d / "job7_revenue_pairs.csv").write_text(rp.HEADERS["job7_revenue_pairs.csv"] + "\n")
             rp.write_rankings(d, b"GLOBAL\t0,0,UNDEFINED\n")
             peak = list(csv.reader(io.StringIO((d / "job1_peak_hours.csv").read_text())))
         self.assertEqual([r[1] for r in peak[1:]], ["2026-08-10-10", "2026-08-10-11", "2026-08-10-09"])
@@ -162,6 +163,26 @@ class Job4CoPurchase(unittest.TestCase):
     def test_stage2_rejects_non_canonical_pair(self):
         with self.assertRaises(rp.StageError):
             rp.run_stage("job4_stage2_mapper.py", "job4_stage2_reducer.py", b'["B", "A"]\t1\n')
+
+
+class Job7RevenuePairs(unittest.TestCase):
+    def run7(self, stats, pairs):
+        with tempfile.NamedTemporaryFile("w", suffix=".csv", delete=False, encoding="utf-8") as f:
+            f.write(stats)
+        try:
+            out, _ = rp.run_stage("job7_revenue_pairs_mapper.py", None, pairs.encode(), env={"ITEM_STATS": f.name})
+        finally:
+            os.unlink(f.name)
+        return list(csv.reader(io.StringIO(out.decode())))
+
+    def test_score_uses_unit_prices_and_tolerates_header_and_trailing_tab(self):
+        stats = 'Item,TotalQuantity,TotalRevenue\nCoffee,10,300.00\t\n"Chips, Salted",4,80.00\t\n'
+        got = self.run7(stats, 'ItemA,ItemB,TransactionCount\n"Chips, Salted",Coffee,3\t\n')
+        self.assertEqual(got, [["Chips, Salted", "Coffee", "3", "20.00", "30.00", "150.00"]])
+
+    def test_unknown_item_fails(self):
+        with self.assertRaises(rp.StageError):
+            self.run7("Coffee,1,10\n", "Coffee,Tea,1\n")
 
 
 class Job5Library(unittest.TestCase):

@@ -4,6 +4,7 @@
 ```
 data/*.csv ──► mapper ──► [combiner] ──► partition(first key field) ──► sort ──► reducer ──► outputs/
                                                                     (multi-stage jobs) └─► outputs/intermediate/*.tsv ──► next stage
+outputs/job4_pairs.csv ──► Job 7 mapper (+ side file outputs/job3_canteen_items.csv) ──► outputs/   (map-only)
 ```
 | Job | Stages | Input |
 |-----|--------|-------|
@@ -70,6 +71,16 @@ Hadoop jobs share no memory, so the global result is passed as **data**:
 4. Anomaly test, exact in Decimal: `2·total·G_visits > 3·G_total·visits`, which is equivalent to
    `avg > 1.5·overall`. It is strict, so a student exactly at the threshold is not flagged.
 
+## Job 7 map-only join (extension: chain Job 3 and Job 4)
+Job 7 joins two finished outputs on the map side. Its input is the Job 4 output
+(`ItemA,ItemB,TransactionCount`); the Job 3 output (`Item,TotalQuantity,TotalRevenue`) is a side
+file, from `ITEM_STATS` locally or `-files …/job3/part-00000#item_stats.txt` on Hadoop. Each pair
+is independent, so the job has **zero reducers** (`-reducer NONE`; locally `run_stage(…, None)`
+skips partition, sort and reduce). Score: `EstPairRevenue = count × (UnitPriceA + UnitPriceB)`,
+with `UnitPrice = TotalRevenue / TotalQuantity` in Decimal. The mapper skips header lines and
+strips Hadoop's trailing TAB from both inputs, and exits non-zero if a pair names an item missing
+from the side file.
+
 ## Job 6 composite key and partitioning (worksheet Q13)
 The key is `RouteID|Hour`, a **single** streaming field. Hadoop's default key (text before the
 first TAB) is therefore the whole composite, and grouping is correct with no extra configuration.
@@ -107,3 +118,12 @@ locally with 1,000,000 Wi-Fi rows on Job 1 and 4 map tasks: about 6.0 s without 
 5.9 s with it, identical output. In one map task the combiner cut shuffle records from 249,981 to
 119 (6.2 MB to 4 KB). The local runtime doesn't change because the simulator has no network.
 On a cluster, that shuffle reduction is the benefit.
+
+## Results dashboard
+`dashboard/` is a Next.js 16 App Router site exported as static HTML (`output: "export"`). At
+build time `lib/data.ts` reads `outputs/*.csv`, `outputs/validation_report.json`,
+`outputs/intermediate/job5_student_totals.tsv` and the scripts in `src/`. Nothing is fetched at
+runtime, so the site cannot disagree with the pipeline run it was built from. Headline numbers are
+derived once in `lib/insights.ts`. Heatmaps and bar lists are server-rendered HTML coloured by CSS
+variables; only the two scatter charts (Recharts), sortable tables, tooltips and the theme toggle
+run in the browser. Vercel builds it with Root Directory `dashboard` and the Next.js preset.

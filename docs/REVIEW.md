@@ -19,6 +19,7 @@ and the tests were checked by mutation. Severity: Critical / High / Medium / Low
 | F9 | Low | Interpretation (O) | Job 5 flags a student from a single long visit (S157: one 98-minute visit). This is correct per the spec but weak evidence. | Kept to the spec and noted in the interpretation. A minimum visit count is suggested as a refinement. |
 | F11 | High | Execution (K) | Found on the first real Hadoop run: `run_hadoop.sh` placed `-combiner` before `-files`. Hadoop parses generic options (`-D`, `-files`) only before streaming options, so it failed with `Unrecognized option: -files`. The README's manual Job 6 command had the same order. The test stub did not enforce ordering, so it missed this. | Fixed: `-D` options go first, streaming options go last. README corrected. |
 | F12 | Medium | Execution (K) | Hadoop turns `-files` paths into URIs. The repository path contains spaces (`Big Data project`), so it failed with `URISyntaxException: Illegal character in path`. | Fixed: the script copies `src/` and `data/` into a space-free staging folder and refuses output paths containing spaces. |
+| F13 | Medium | Deployment (K) | Found on the first Vercel deploy (18 Oct 2026): a repo-root `vercel.json` ran `cd dashboard && npm ci`, but the Vercel project's Root Directory is `dashboard`, so the build already ran inside it and failed with `cd: dashboard: No such file or directory`. | Removed the root `vercel.json`; Vercel's Next.js preset builds from `dashboard/`. Verified with `vercel build` using the project's pulled settings, then deployed. |
 | F10 | Low | Runner | Peak-hour and top-pair ranking use `float` on 2-decimal strings. That is exact enough for these magnitudes, and ties are compared on identical strings. | Accepted. Tie-break is tested. |
 
 ## Areas checked with no defect found
@@ -60,3 +61,4 @@ code, and the suite passed. Re-running the mutation on the actual code line was 
 ## Unresolved risks
 - Verified on Hadoop 3.5.0 in standalone mode only. Not yet run on a multi-node cluster or with more than one reducer on real Hadoop (F7 still relies on `-D mapreduce.job.reduces=1`).
 - Results reflect synthetic generator patterns only.
+- The dashboard shows whatever `outputs/` held when it was built. Rerun the pipeline and push after changing data or code.

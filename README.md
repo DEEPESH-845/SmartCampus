@@ -45,8 +45,8 @@ stage design, the real mapper and reducer source, and its full sortable output. 
 cd dashboard && npm ci && npm run dev        # http://localhost:3000
 npm run build                                # static export to dashboard/out/
 ```
-To deploy, import the repository into Vercel and leave the root directory as `/`. The root
-[`vercel.json`](vercel.json) installs, builds and serves `dashboard/out`.
+To deploy, import the repository into Vercel with **Root Directory `dashboard`** and the **Next.js**
+framework preset (Vercel picks both automatically). No `vercel.json` or environment variables are needed.
 
 ---
 

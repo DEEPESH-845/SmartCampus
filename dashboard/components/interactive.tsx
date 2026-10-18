@@ -22,7 +22,7 @@ export function ThemeToggle() {
   return (
     <button type="button" onClick={() => setTheme(dark ? "light" : "dark")}
       aria-label={dark ? "Switch to light theme" : "Switch to dark theme"}
-      className="inline-flex size-9 items-center justify-center rounded-full border bg-card text-muted-foreground hover:text-foreground">
+      className="inline-flex size-9 shrink-0 items-center justify-center rounded-full text-muted-foreground hover:bg-muted hover:text-foreground">
       {dark ? <Sun className="size-4" /> : <Moon className="size-4" />}
     </button>
   );
@@ -30,15 +30,20 @@ export function ThemeToggle() {
 
 export function NavLinks({ links }: { links: { href: string; label: string }[] }) {
   const path = usePathname();
+  const list = useRef<HTMLUListElement>(null);
+  // on narrow screens the list scrolls; keep the current page's link visible
+  useEffect(() => {
+    list.current?.querySelector<HTMLElement>("[aria-current=page]")?.scrollIntoView({ block: "nearest", inline: "center" });
+  }, [path]);
   return (
-    <ul className="flex gap-1 overflow-x-auto [scrollbar-width:none]">
+    <ul ref={list} className="ml-auto flex w-fit max-w-full gap-1 overflow-x-auto [scrollbar-width:none]">
       {links.map((l) => {
         const active = l.href === "/" ? path === "/" : path.startsWith(l.href);
         return (
           <li key={l.href}>
             <Link href={l.href} aria-current={active ? "page" : undefined}
-              className={cn("block rounded-full px-3 py-1 text-[13px] whitespace-nowrap text-muted-foreground hover:bg-muted hover:text-foreground",
-                active && "bg-muted font-medium text-foreground")}>
+              className={cn("block px-2.5 py-1 text-[14px] whitespace-nowrap text-muted-foreground hover:text-foreground",
+                active && "text-foreground underline decoration-series-1 decoration-2 underline-offset-[6px]")}>
               {l.label}
             </Link>
           </li>
@@ -95,7 +100,7 @@ export function DataTable({ columns, rows, maxHeight = 360, caption }: {
     <div className="overflow-auto rounded-lg border" style={{ maxHeight: maxHeight === "none" ? undefined : maxHeight }}>
       <Table>
         {caption && <caption className="sr-only">{caption}</caption>}
-        <TableHeader className="sticky top-0 z-10 bg-card">
+        <TableHeader className="sticky top-0 z-10 bg-background">
           <TableRow>
             {columns.map((c, i) => {
               const active = sort?.col === i;

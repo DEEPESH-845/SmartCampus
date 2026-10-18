@@ -16,7 +16,7 @@ function TipBox({ lines }: { lines: string[] }) {
 
 // dots carry a 2px surface ring so overlapping marks stay distinct
 const dot = (r: number, fill: string) => function Dot(p: { cx?: number; cy?: number }) {
-  return <circle cx={p.cx} cy={p.cy} r={r} fill={fill} stroke="var(--card)" strokeWidth={2} />;
+  return <circle cx={p.cx} cy={p.cy} r={r} fill={fill} stroke="var(--background)" strokeWidth={2} />;
 };
 
 export type PairPoint = { name: string; count: number; revenue: number; rankCount: number; rankRevenue: number; highlight: boolean };
@@ -57,7 +57,7 @@ export function LibraryStrip({ students, average, threshold }: { students: Stude
   const heavy = students.filter((s) => s.flagged && s.visits > 1);
   const single = students.filter((s) => s.flagged && s.visits === 1);
   const triangle = (p: { cx?: number; cy?: number }) => (
-    <path d={`M${p.cx} ${p.cy! - 6.5} L${p.cx! + 6.5} ${p.cy! + 5} L${p.cx! - 6.5} ${p.cy! + 5} Z`} fill="var(--critical)" stroke="var(--card)" strokeWidth={2} strokeLinejoin="round" />
+    <path d={`M${p.cx} ${p.cy! - 6.5} L${p.cx! + 6.5} ${p.cy! + 5} L${p.cx! - 6.5} ${p.cy! + 5} Z`} fill="var(--critical)" stroke="var(--background)" strokeWidth={2} strokeLinejoin="round" />
   );
   return (
     <ChartContainer config={config} className="aspect-auto h-[240px] w-full">
